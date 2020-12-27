@@ -1,0 +1,52 @@
+<div class="centrare">
+
+
+
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-md-center">
+    <div class="col col-lg-2 card" (click)="flip()">
+        <img src="../assets/images/cartaF.png" width="160em">
+        <div class="back"><img [src]="passato" width="160em"></div>
+    </div>
+
+        <div class="col col-lg-2 card" (click)="flip()">
+            <img src="../assets/images/cartaF.png" width="160em">
+            <div class="back"><img [src]="presente" width="160em"></div>
+        </div>
+
+
+        <div class="col col-lg-2 card" (click)="flip()">
+<img src="../assets/images/cartaF.png" width="160em">
+            <div class="back"><img [src]="futuro" width="160em"></div>
+        </div>
+    </div>
+
+
+
+ <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+        <p class="text-center paspre">Passato</p>
+    </div>
+    <div class="col col-lg-2">
+        <p class="text-center paspre">Presente</p>
+    </div>
+    <div class="col col-lg-2">
+        <p class="text-center paspre">Futuro</p>
+    </div>
+
+    
+
+
+
+
+</div>
+<div class="row justify-content-md-center">
+
+   
+<button type="button" class="btn btn-outline-light" id="button" (click)="getRandomTaroks()">scopri le tre carte</button>
+<button type="button" class="btn btn-outline-light" id="button" (click)="loop5()">scopri le tre carte</button>
+
+</div>

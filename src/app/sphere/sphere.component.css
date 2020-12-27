@@ -1,0 +1,329 @@
+.small {
+  padding-top: 10%;
+  margin-bottom: -20%;
+  transform: scale(0.2, 0.2);
+  -ms-transform: scale(0.8, 0.8); /* IE 9 */
+  -webkit-transform: scale(0.2, 0.2); /* Safari and Chrome */
+  -o-transform: scale(0.8, 0.8); /* Opera */
+  -moz-transform: scale(0.8, 0.8); /* Firefox */
+}
+
+.pt0 {
+  fill: #f8bf3a;
+}
+.pt1 {
+  fill: #89772e;
+}
+.pt2 {
+  fill: #87762d;
+}
+.pt3 {
+  fill: #f8bf3a;
+}
+.pt4 {
+  fill: #c6b158;
+}
+.pt5 {
+  fill: #605422;
+}
+.pt6 {
+  fill: #d2b951;
+}
+.pt7 {
+  fill: #7f7455;
+}
+.pt8 {
+  fill: #4c483f;
+}
+.pt9 {
+  fill: #a8964c;
+}
+.pt10 {
+  fill: #99873a;
+}
+.st11 {
+  fill: #5076b2;
+}
+.st12 {
+  fill: #567bb5;
+}
+.st13 {
+  fill: #5b81b8;
+}
+.st14 {
+  fill: #6186bb;
+}
+.st15 {
+  fill: #678cbe;
+}
+.st16 {
+  fill: #6c91c1;
+}
+.st17 {
+  fill: #7296c4;
+}
+.st18 {
+  fill: #789cc7;
+}
+.st19 {
+  fill: #7da1ca;
+}
+.st20 {
+  fill: #83a6cd;
+}
+.st21 {
+  fill: #89acd0;
+}
+.st22 {
+  fill: #8eb1d2;
+}
+.st23 {
+  fill: #94b7d5;
+}
+.st24 {
+  fill: #9abcd8;
+}
+.st25 {
+  fill: #9fc1db;
+}
+.st26 {
+  fill: #a5c7de;
+}
+.st27 {
+  fill: #abcce1;
+}
+.st28 {
+  fill: #b0d1e4;
+}
+.st29 {
+  fill: #b6d7e7;
+}
+.st30 {
+  fill: #bcdcea;
+}
+.st31 {
+  fill: #c1e2ed;
+}
+.st32 {
+  fill: #c7e7f0;
+}
+.st0 {
+  fill: #232b2b;
+}
+.st1 {
+  fill: url(#SVGID_1_);
+}
+.st2 {
+  fill: url(#SVGID_2_);
+}
+.st3 {
+  fill: url(#SVGID_3_);
+}
+.st4 {
+  fill: url(#SVGID_4_);
+}
+.st5 {
+  fill: url(#SVGID_5_);
+}
+.st6 {
+  fill: url(#SVGID_6_);
+}
+.st33 {
+  opacity: 0.2;
+  fill: #ffffff;
+  enable-background: new;
+}
+.st34 {
+  fill: #e6f0ff;
+}
+.st35 {
+  opacity: 0.3;
+  fill: #ffffff;
+  enable-background: new;
+}
+
+html {
+  background-color: #232b2b;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 110px 25px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 110px 25px rgba(255, 255, 255, 1);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 110px 25px rgba(255, 255, 255, 1);
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 120px;
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  clip-path: circle(200px at 200px 200px);
+  clip-path: circle(200px at center);
+  display: block;
+  position: absolute;
+  background: #ccc;
+  opacity: 0.5;
+}
+.crystal {
+  width: 400px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 120px;
+  z-index: -1;
+}
+/*div{
+        background-color: #232b2b;
+        width: 100%;
+        height: 100%;
+        display: block;
+    	  position: absolute;
+        z-index: -2;
+      }*/
+
+.glare {
+  z-index: 10;
+  position: absolute;
+  width: 140px;
+  left: 0;
+  right: 184px;
+  margin: 0 auto;
+  margin-top: 142px;
+  opacity: 0.8;
+}
+.foreground {
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  background-color: #232b2b;
+  top: 440px;
+  z-index: -5;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(35, 43, 43, 0.19) 0%,
+    rgba(156, 176, 228, 0.75) 30%,
+    rgba(45, 36, 59, 0.65) 55%,
+    rgba(45, 36, 59, 0.75) 100%
+  ); /* W3C */
+  -webkit-animation: foreground-glowing 1500ms infinite;
+  -moz-animation: foreground-glowing 1500ms infinite;
+  -o-animation: foreground-glowing 1500ms infinite;
+  animation: foreground-glowing 1500ms infinite;
+}
+.foreground-wall {
+  position: absolute;
+  width: 100%;
+  top: 660px;
+  z-index: -4;
+}
+.glow {
+  border-radius: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 120px;
+  width: 400px;
+  height: 400px;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% {
+    background-color: #9cb0ea;
+    box-shadow: 0 0 3px #92e4ff;
+    opacity: 0.4;
+  }
+  50% {
+    background-color: #92d5ff;
+    box-shadow: 0 0 40px #5aa9ec;
+    opacity: 0.6;
+  }
+  100% {
+    background-color: #9cb0ea;
+    box-shadow: 0 0 3px #92e4ff;
+    opacity: 0.4;
+  }
+}
+@-moz-keyframes glowing {
+  0% {
+    background-color: #9cb0ea;
+    box-shadow: 0 0 3px #92e4ff;
+    opacity: 0.4;
+  }
+  50% {
+    background-color: #92d5ff;
+    box-shadow: 0 0 40px #5aa9ec;
+    opacity: 0.6;
+  }
+  100% {
+    background-color: #9cb0ea;
+    box-shadow: 0 0 3px #92e4ff;
+    opacity: 0.4;
+  }
+}
+@-o-keyframes glowing {
+  0% {
+    background-color: #9cb0ea;
+    box-shadow: 0 0 3px #92e4ff;
+    opacity: 0.4;
+  }
+  50% {
+    background-color: #92d5ff;
+    box-shadow: 0 0 40px #5aa9ec;
+    opacity: 0.6;
+  }
+  100% {
+    background-color: #9cb0ea;
+    box-shadow: 0 0 3px #92e4ff;
+    opacity: 0.4;
+  }
+}
+@keyframes glowing {
+  0% {
+    background-color: #9cb0ea;
+    box-shadow: 0 0 3px #92e4ff;
+    opacity: 0.4;
+  }
+  50% {
+    background-color: #92d5ff;
+    box-shadow: 0 0 40px #5aa9ec;
+    opacity: 0.6;
+  }
+  100% {
+    background-color: #9cb0ea;
+    box-shadow: 0 0 3px #92e4ff;
+    opacity: 0.4;
+  }
+}
+
+@keyframes foreground-glowing {
+  0% {
+    background-color: #9cb0ea;
+    box-shadow: 0 0 3px #92e4ff;
+    opacity: 0.2;
+  }
+  50% {
+    background-color: #92d5ff;
+    box-shadow: 0 0 3px #5aa9ec;
+    opacity: 0.3;
+  }
+  100% {
+    background-color: #9cb0ea;
+    box-shadow: 0 0 3px #92e4ff;
+    opacity: 0.2;
+  }
+}

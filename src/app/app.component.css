@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+.sfondo {
+  background-image: url("../assets/images/gradiente.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
