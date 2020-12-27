@@ -11,7 +11,9 @@ export class TarotsComponent implements OnInit {
   tarokki = TUTTITAROKKI;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.tarokkinondoppiati);
+  }
 
   flip() {
     $('.card').toggleClass('flipped');
@@ -21,17 +23,26 @@ export class TarotsComponent implements OnInit {
     let g = this.shuffle(this.tarokki);
     return g[0].immagine;
   }
-  passato = this.getimg();
-  presente = this.getRandomTaroks()[1].immagine;
-  futuro = this.getRandomTaroks()[2].immagine;
+
+  tarokkinondoppiati = this.getRandomTaroks();
+  passato = this.tarokkinondoppiati[0].immagine;
+  presente = this.tarokkinondoppiati[1].immagine;
+  futuro = this.tarokkinondoppiati[2].immagine;
+
   getRandomTaroks() {
     let taroks = [];
-    var passato = this.tarokki[Math.floor(Math.random() * this.tarokki.length)];
-    var presente = this.tarokki[
-      Math.floor(Math.random() * this.tarokki.length)
-    ];
-    var futuro = this.tarokki[Math.floor(Math.random() * this.tarokki.length)];
+
+    let i = Math.floor(Math.random() * this.tarokki.length);
+    var passato = this.tarokki[i];
     taroks[0] = passato;
+    this.tarokki.splice(i, 1);
+
+    let d = Math.floor(Math.random() * this.tarokki.length);
+    var presente = this.tarokki[d];
+    taroks[1] = presente;
+    this.tarokki.splice(d, 1);
+    var futuro = this.tarokki[Math.floor(Math.random() * this.tarokki.length)];
+
     taroks[1] = presente;
     taroks[2] = futuro;
     this.flip();
