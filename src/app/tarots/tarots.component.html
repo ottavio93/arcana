@@ -47,6 +47,33 @@
 
    
 <button type="button" class="btn btn-outline-light" id="button" (click)="getRandomTaroks()">scopri le tre carte</button>
-<button type="button" class="btn btn-outline-light" id="button" (click)="loop5()">scopri le tre carte</button>
+
+
+</div>
+<style>
+    #droptarget {
+        float: left;
+        width: 200px;
+        height: 35px;
+        margin: 55px;
+        margin-top: 155px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+    }
+</style>
+<div>
+
+    <p ondragstart="dragStart(event)" draggable="true" id="dragtarget">Drag me into the rectangle!</p>
+
+    <div id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+
+    <p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier
+        versions or Safari 5.1 and earlier versions.</p>
+
+    <p id="demo"></p>
+
+   
+   
 
 </div>

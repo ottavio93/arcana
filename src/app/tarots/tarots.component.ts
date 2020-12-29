@@ -1,3 +1,4 @@
+import { CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 
 import { TUTTITAROKKI } from '../data';
@@ -12,16 +13,11 @@ export class TarotsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.tarokkinondoppiati);
+    console.log(this.tarokki);
   }
 
   flip() {
     $('.card').toggleClass('flipped');
-  }
-
-  getimg() {
-    let g = this.shuffle(this.tarokki);
-    return g[0].immagine;
   }
 
   tarokkinondoppiati = this.getRandomTaroks();
@@ -43,47 +39,67 @@ export class TarotsComponent implements OnInit {
     this.tarokki.splice(d, 1);
     var futuro = this.tarokki[Math.floor(Math.random() * this.tarokki.length)];
 
-    taroks[1] = presente;
     taroks[2] = futuro;
     this.flip();
     return taroks;
   }
 
-  shuffle(array) {
-    this.flip();
-    var currentIndex = array.length,
-      temporaryValue,
-      randomIndex;
-
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-
-    return array;
+  dragStart(event) {
+    event.dataTransfer.setData('Text', event.target.id);
   }
 
-  loop5() {
-    this.flip();
-    let i = 0;
-    let timer = setInterval(function () {
-      this.shuffle1();
-      if (i >= 10001) {
-        clearInterval(timer);
-      }
-      i++;
-    }, 500);
+  allowDrop(event) {
+    event.preventDefault();
+    document.getElementById('demo').innerHTML =
+      'The p element is OVER the droptarget.';
+    event.target.style.border = '4px dotted green';
   }
 
-  shuffle1() {
-    this.tarokki.sort(() => Math.random() - 0.5);
-    this.shuffle(this.tarokki);
+  drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData('Text');
+    event.target.appendChild(document.getElementById(data));
+    document.getElementById('demo').innerHTML = 'The p element was dropped.';
   }
 }
+// shuffle(array) {
+//   this.flip();
+//   var currentIndex = array.length,
+//     temporaryValue,
+//     randomIndex;
+
+//   // While there remain elements to shuffle...
+//   while (0 !== currentIndex) {
+//     // Pick a remaining element...
+//     randomIndex = Math.floor(Math.random() * currentIndex);
+//     currentIndex -= 1;
+
+//     // And swap it with the current element.
+//     temporaryValue = array[currentIndex];
+//     array[currentIndex] = array[randomIndex];
+//     array[randomIndex] = temporaryValue;
+//   }
+
+//   return array;
+// }
+
+// loop5() {
+//   this.flip();
+//   let i = 0;
+//   let timer = setInterval(function () {
+//     this.shuffle1();
+//     if (i >= 10001) {
+//       clearInterval(timer);
+//     }
+//     i++;
+//   }, 500);
+// }
+
+// shuffle1() {
+//   this.tarokki.sort(() => Math.random() - 0.5);
+//   this.shuffle(this.tarokki);
+// }
+// getimg() {
+//   let g = this.shuffle(this.tarokki);
+//   return g[0].immagine;
+// }

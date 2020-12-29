@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TUTTITAROKKI } from '../data';
 
 @Component({
   selector: 'app-sphere',
@@ -6,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sphere.component.css'],
 })
 export class SphereComponent implements OnInit {
-  constructor() {}
-
+  constructor(private router: Router) {}
+  tarokki = TUTTITAROKKI;
   ngOnInit(): void {
+    console.log(this.tarokki);
     // Create an array to store our particles
     var particles = [];
 
@@ -187,5 +190,9 @@ export class SphereComponent implements OnInit {
         draw();
       }, 1000 / targetFPS);
     }
+  }
+
+  gotoHome() {
+    this.router.navigate(['/tarots2']); // define your component where you want to go
   }
 }

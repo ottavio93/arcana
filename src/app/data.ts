@@ -46,7 +46,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
 
   {
-    punteggio: -712,
+    punteggio: -72,
     immagine: '../assets/images/deck/03_Empress.jpg',
 
     futuroAmore: "E' l'inizio di un nuovo ciclo della sua vita",
@@ -60,7 +60,7 @@ export const TUTTITAROKKI: TarotService[] = [
     passatoAmore: 'tusoreta',
   },
   {
-    punteggio: -912,
+    punteggio: -2,
     immagine: '../assets/images/deck/04_Emperor.jpg',
 
     futuroAmore: "E' l'inizio di un nuovo ciclo della sua vita",
@@ -78,7 +78,108 @@ export const TUTTITAROKKI: TarotService[] = [
     punteggio: -92,
     immagine: '../assets/images/deck/05_Hierophant.jpg',
 
-    futuroAmore: "E' l'inizio di un nuovo ciclo della sua vita",
+    futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: 'tusore',
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: 'tusoreta',
+  },
+
+  {
+    punteggio: -92,
+    immagine: '../assets/images/deck/06_Lovers.jpg',
+
+    futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: 'tusore',
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: 'tusoreta',
+  },
+  {
+    punteggio: -92,
+    immagine: '../assets/images/deck/07_Chariot.jpg',
+
+    futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: 'tusore',
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: 'tusoreta',
+  },
+  {
+    punteggio: -92,
+    immagine: '../assets/images/deck/08_Strength.jpg',
+
+    futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: 'tusore',
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: 'tusoreta',
+  },
+
+  {
+    punteggio: -92,
+    immagine: '../assets/images/deck/09_Hermit.jpg',
+
+    futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: 'tusore',
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: 'tusoreta',
+  },
+
+  {
+    punteggio: -92,
+    immagine: '../assets/images/deck/10_Wheel_of_Fortune.jpg',
+
+    futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: 'tusore',
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: 'tusoreta',
+  },
+  {
+    punteggio: -92,
+    immagine: '../assets/images/deck/11_Justice.jpg',
+
+    futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: 'tusore',
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: 'tusoreta',
+  },
+  {
+    punteggio: -92,
+    immagine: '../assets/images/deck/12_Hanged_Man.jpg',
+
+    futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
     futuroLavoro: 'rgrt',
     futuroSalute: 'tuzia',
     passatoLavoro: 'tufrate',
