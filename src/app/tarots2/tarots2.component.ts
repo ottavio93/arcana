@@ -39,25 +39,6 @@ export class Tarots2Component implements OnInit {
     console.log('e sparito');
   }
 
-  vedi() {
-    var isDragging = false;
-    $('h3')
-      .mousedown(function () {
-        isDragging = false;
-      })
-      .mousemove(function () {
-        isDragging = true;
-        console.log('2343546');
-      })
-      .mouseup(function () {
-        var wasDragging = isDragging;
-        isDragging = false;
-        if (!wasDragging) {
-          $('#throbble').toggle();
-        }
-      });
-    this.spariscitesto();
-  }
   drag(event: CdkDrag<string[]>) {
     event._dragRef;
     this.spariscitesto();
