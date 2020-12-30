@@ -1,41 +1,78 @@
-
 <div class="d-flex justify-content-center">
+    <div id="sparisce">
+        <div cdkDropListGroup>
+            <div class="example-container">
 
-<div cdkDropListGroup>
-    <div class="example-container">
-
-<div class="example-container">
-  
-
-    <div cdkDropList [cdkDropListData]="done" class="example-list2" (cdkDropListDropped)="drop($event)">
-       <div id="messaggio"><h3 id="demo">inserisci tre carte</h3></div> 
-        <div class="droptarget"  class="example-box" *ngFor="let item of done" cdkDrag><div class="lines"><img [src]="item.immagine" width="160em"></div></div>
-    
-    
-    </div>
-</div>
-   
+                <div class="example-container">
 
 
-<div class="row justify-content-md-center"id="bottoni" style="display: none;margin-left: 9em;" >
-<button type="button" class="btn btn-outline-light" id="button">scopri sulamore
-    </button>
+                    <div cdkDropList [cdkDropListData]="done" class="example-list2" (cdkDropListDropped)="drop($event)">
+                        <div id="messaggio">
+                            <h3 id="demo">inserisci tre carte</h3>
+                        </div>
+                        <div class="droptarget" class="example-box" *ngFor="let item of done" cdkDrag>
+                            <div class="lines"><img [src]="item.immagine" width="160em"></div>
+                        </div>
 
-    <button type="button" class="btn btn-outline-light" id="button" >scopri sulavoro
-        </button>
 
-<button type="button" class="btn btn-outline-light" id="button">scopri sulasalute
-    </button>
-</div>
+                    </div>
+                </div>
 
 
 
+                <div class="row justify-content-md-center" id="bottoni" style="display: none;margin-left: 9em;">
+                    <button type="button" class="btn btn-outline-light" id="button" (click)='showTesti()'>scopri
+                        sulamore
+                    </button>
 
-        <div  cdkDropList [cdkDropListData]="todo" class="example-list" (CdkDrag)="spariscitesto()"(cdkDropListDropped)="drop($event)" >
-            <div (cdkDragStarted)="spariscitesto()" class="example-box card" *ngFor="let item of todo" cdkDrag><img src="../assets/images/cartaF.png"draggable="true" id="container"   width="160em"  ></div>
+                    <button type="button" class="btn btn-outline-light" id="button">scopri sulavoro
+                    </button>
+
+                    <button type="button" class="btn btn-outline-light" id="button">scopri sulasalute
+                    </button>
+                </div>
+
+
+
+
+                <div cdkDropList [cdkDropListData]="todo" class="example-list" (CdkDrag)="spariscitesto()"
+                    (cdkDropListDropped)="drop($event)">
+                    <div (cdkDragStarted)="spariscitesto()" class="example-box card" *ngFor="let item of todo" cdkDrag>
+                        <img src="../assets/images/cartaF.png" draggable="true" id="container" width="160em"></div>
+                </div>
+                
+            </div>
+
+
         </div>
-    </div>
 
-   
 </div>
+<div *ngIf="done.length>2" >
+<div id="testi" style="display:none">
+
+    
+    <div   *ngIf="done[0].futuroAmore" >
+    
+{{done[0].futuroAmore}}
+</div>
+
+<div   *ngIf="done[0].nome">
+
+    {{done[0].nome}}
+</div>
+
+<div  *ngIf="done[1].futuroAmore">
+
+    {{done[1].futuroAmore}}
+</div>
+
+<div  *ngIf="done[2].nome">
+
+    {{done[2].nome}}
+</div>
+</div>
+</div>
+
+
+
 </div>

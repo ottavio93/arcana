@@ -13,6 +13,7 @@ import {
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { TUTTITAROKKI } from '../data';
+import { OnDestroy } from '@angular/core';
 declare var $: any;
 @Component({
   selector: 'app-tarots2',
@@ -75,6 +76,11 @@ export class Tarots2Component implements OnInit {
     }
   }
 
+  stampatrecarte() {
+    console.log('gggghghdddddddddddddddddddddddddddddddddddddddddddddddddaa');
+    console.log(this.done);
+  }
+
   flip() {
     console.log('grfgggggggggggggggggggggggggggggggggggggggggggggg');
     $('.card').toggleClass('flipped');
@@ -133,5 +139,32 @@ export class Tarots2Component implements OnInit {
   //     );
   //     return false;
   //   }
-  // }
+  //
+
+  nome() {
+    var message;
+    if (typeof this.done[0].nome !== undefined) message = this.done[0].nome;
+
+    return message;
+  }
+
+  frin2() {
+    var message1;
+    if (typeof this.done[1].futuroAmore !== undefined)
+      message1 = this.done[1].passatoAmore;
+    else {
+      message1 = 'caro';
+    }
+    console.log('e arivato dai');
+    return message1;
+  }
+
+  showTesti() {
+    var testi = document.getElementById('testi');
+    testi.style.display = 'flex';
+
+    var element = document.getElementById('sparisce');
+    element.style.display = 'none';
+  }
+  // ngOnDestroy() {}
 }

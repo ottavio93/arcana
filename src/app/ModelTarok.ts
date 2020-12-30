@@ -1,4 +1,5 @@
 export interface TarotService {
+  nome: string;
   punteggio: Number;
   immagine: string;
   futuroAmore: string;

@@ -53,6 +53,7 @@ import { SphereComponent } from './sphere/sphere.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Tarots2Component } from './tarots2/tarots2.component';
 import { Router } from '@angular/router';
+import { TestiTarokkiComponent } from './testi-tarokki/testi-tarokki.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { Router } from '@angular/router';
     TarotsComponent,
     SphereComponent,
     Tarots2Component,
+    TestiTarokkiComponent,
   ],
   imports: [
     BrowserModule,

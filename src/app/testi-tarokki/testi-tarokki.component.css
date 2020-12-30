@@ -1,0 +1,12 @@
+.scatola {
+  font-weight: 100;
+  font-size: 2em;
+  margin: auto;
+  color: aliceblue;
+  border: solid 1px #ccc;
+  min-height: 22em;
+  min-width: 133%;
+  border-radius: 4px;
+  overflow: auto;
+  display: inline-flex;
+}

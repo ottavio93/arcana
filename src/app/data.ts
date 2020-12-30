@@ -1,6 +1,7 @@
 import { TarotService } from './ModelTarok';
 export const TUTTITAROKKI: TarotService[] = [
   {
+    nome: 'folle',
     punteggio: 12,
     immagine: '../assets/images/deck/00_Fool.jpg',
 
@@ -16,6 +17,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
 
   {
+    nome: 'Il mago',
     punteggio: 2,
     immagine: '../assets/images/deck/01_Magician.jpg',
 
@@ -31,6 +33,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
 
   {
+    nome: 'La principessa',
     punteggio: -12,
     immagine: '../assets/images/deck/02_High_Priestess.jpg',
 
@@ -46,6 +49,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
 
   {
+    nome: 'Imperatirce',
     punteggio: -72,
     immagine: '../assets/images/deck/03_Empress.jpg',
 
@@ -60,6 +64,7 @@ export const TUTTITAROKKI: TarotService[] = [
     passatoAmore: 'tusoreta',
   },
   {
+    nome: 'Imperatore',
     punteggio: -2,
     immagine: '../assets/images/deck/04_Emperor.jpg',
 
@@ -75,6 +80,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
 
   {
+    nome: 'Erofante',
     punteggio: -92,
     immagine: '../assets/images/deck/05_Hierophant.jpg',
 
@@ -90,6 +96,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
 
   {
+    nome: 'Gli amanti',
     punteggio: -92,
     immagine: '../assets/images/deck/06_Lovers.jpg',
 
@@ -104,6 +111,7 @@ export const TUTTITAROKKI: TarotService[] = [
     passatoAmore: 'tusoreta',
   },
   {
+    nome: 'Carro',
     punteggio: -92,
     immagine: '../assets/images/deck/07_Chariot.jpg',
 
@@ -118,6 +126,7 @@ export const TUTTITAROKKI: TarotService[] = [
     passatoAmore: 'tusoreta',
   },
   {
+    nome: 'Forza',
     punteggio: -92,
     immagine: '../assets/images/deck/08_Strength.jpg',
 
@@ -133,6 +142,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
 
   {
+    nome: 'Ermita',
     punteggio: -92,
     immagine: '../assets/images/deck/09_Hermit.jpg',
 
@@ -148,6 +158,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
 
   {
+    nome: 'Routa della fortuna',
     punteggio: -92,
     immagine: '../assets/images/deck/10_Wheel_of_Fortune.jpg',
 
@@ -162,6 +173,7 @@ export const TUTTITAROKKI: TarotService[] = [
     passatoAmore: 'tusoreta',
   },
   {
+    nome: 'Giustizia',
     punteggio: -92,
     immagine: '../assets/images/deck/11_Justice.jpg',
 
@@ -176,6 +188,8 @@ export const TUTTITAROKKI: TarotService[] = [
     passatoAmore: 'tusoreta',
   },
   {
+    nome: 'Impiccato',
+
     punteggio: -92,
     immagine: '../assets/images/deck/12_Hanged_Man.jpg',
 
