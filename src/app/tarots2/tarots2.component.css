@@ -54,8 +54,9 @@
   border: solid 1px #ccc;
   min-height: 22em;
   min-width: 133%;
+  max-width: 38.7em;
   border-radius: 4px;
-  overflow: auto;
+  overflow: hidden;
   display: inline-flex;
 }
 
@@ -77,4 +78,31 @@
 .justify-content-center {
   justify-content: center !important;
   padding-top: 6em;
+  margin-right: 5em;
+}
+.risultati {
+  width: 400px;
+  max-width: 100%;
+  border: solid 1px #ccc;
+  min-height: 22em;
+  min-width: 133%;
+  border-radius: 4px;
+  color: aliceblue;
+  padding: 4em;
+  color: aliceblue;
+  padding-top: 2em;
+}
+.testoMagico {
+  margin-bottom: 0.2em;
+  color: #e9ccf1;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  letter-spacing: 13px;
+  animation: text-flicker 3s linear infinite;
+}
+.testoMagico2 {
+  color: #dfb017;
+  font-family: "Raleway", sans-serif;
+
+  animation: text-flicker 3s linear infinite;
 }

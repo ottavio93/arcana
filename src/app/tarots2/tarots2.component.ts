@@ -14,14 +14,21 @@ import {
 } from '@angular/cdk/drag-drop';
 import { TUTTITAROKKI } from '../data';
 import { OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
+import { ThrowStmt } from '@angular/compiler';
+import { HomeComponent } from '../home/home.component';
+import { HostListener } from '@angular/core';
 declare var $: any;
+
 @Component({
   selector: 'app-tarots2',
   templateUrl: './tarots2.component.html',
   styleUrls: ['./tarots2.component.css'],
 })
-export class Tarots2Component implements OnInit {
+export class Tarots2Component implements OnInit, OnDestroy {
+  home: HomeComponent;
   ngOnInit() {}
+  constructor(private _router: Router) {}
   tarokki = TUTTITAROKKI;
 
   tarokkinondoppiati = this.getRandomTaroks();
@@ -167,4 +174,16 @@ export class Tarots2Component implements OnInit {
     element.style.display = 'none';
   }
   // ngOnDestroy() {}
+  reloadComponent() {
+    this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this._router.onSameUrlNavigation = 'reload';
+    this._router.navigate(['/']);
+  }
+  @HostListener('unloaded')
+  ngOnDestroy() {
+    console.log('Items destroyed');
+    this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this._router.onSameUrlNavigation = 'reload';
+    this._router.navigate(['/']);
+  }
 }

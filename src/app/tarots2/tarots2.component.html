@@ -8,7 +8,7 @@
 
                     <div cdkDropList [cdkDropListData]="done" class="example-list2" (cdkDropListDropped)="drop($event)">
                         <div id="messaggio">
-                            <h3 id="demo">inserisci tre carte</h3>
+                            <h3 id="demo" class="testoMagico">inserisci tre carte</h3>
                         </div>
                         <div class="droptarget" class="example-box" *ngFor="let item of done" cdkDrag>
                             <div class="lines"><img [src]="item.immagine" width="160em"></div>
@@ -49,27 +49,19 @@
 </div>
 <div *ngIf="done.length>2" >
 <div id="testi" style="display:none">
+<button type="button" onclick="location.href='#'" class="btn btn-outline-light" id="button" style="margin-left: 31em;
 
+    position: fixed;"  >x
+</button>
     
-    <div   *ngIf="done[0].futuroAmore" >
-    
-{{done[0].futuroAmore}}
+    <div   class="risultati" *ngIf="done[0].futuroAmore" >
+  <p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span class="testoMagico2"> {{done[0].nome}}</span>  ti dice:</p>{{done[0].passatoAmore }}<br>
+<p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span class="testoMagico2">{{done[1].nome}}</span> ti dice:</p>{{done[1].presenteAmore }}<br>
+<p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span class="testoMagico2">{{done[2].nome}}</span>  ti dice:</p>{{done[2].futuroAmore }}<br>
 </div>
 
-<div   *ngIf="done[0].nome">
 
-    {{done[0].nome}}
-</div>
 
-<div  *ngIf="done[1].futuroAmore">
-
-    {{done[1].futuroAmore}}
-</div>
-
-<div  *ngIf="done[2].nome">
-
-    {{done[2].nome}}
-</div>
 </div>
 </div>
 

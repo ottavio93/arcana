@@ -1,11 +1,11 @@
 .small {
-  padding-top: 10%;
+  padding-top: 5%;
   margin-bottom: -20%;
-  transform: scale(0.2, 0.2);
-  -ms-transform: scale(0.8, 0.8); /* IE 9 */
-  -webkit-transform: scale(0.2, 0.2); /* Safari and Chrome */
-  -o-transform: scale(0.8, 0.8); /* Opera */
-  -moz-transform: scale(0.8, 0.8); /* Firefox */
+  transform: scale(0.3, 0.3);
+  -ms-transform: scale(0.3, 0.3); /* IE 9 */
+  -webkit-transform: scale(0.3, 0.3); /* Safari and Chrome */
+  -o-transform: scale(0.3, 0.3); /* Opera */
+  -moz-transform: scale(0.3, 0.3); /* Firefox */
 }
 
 .pt0 {
