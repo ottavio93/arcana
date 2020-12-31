@@ -6,7 +6,33 @@
                 <div class="example-container">
 
 
-                    <div cdkDropList [cdkDropListData]="done" class="example-list2" (cdkDropListDropped)="drop($event)">
+
+
+<div class="example-list2" (cdkDropListDropped)="drop($event)" id="cookietext" style="display: none;">
+    <div  style="margin: auto;
+    text-align: center;">
+        <h3 class="testoMagico" >registrati o accedi per nuove letture e fuzionalità</h3>
+    </div>
+    
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div cdkDropList [cdkDropListData]="done" class="example-list2" (cdkDropListDropped)="drop($event)" id="cookie" >
                         <div id="messaggio">
                             <h3 id="demo" class="testoMagico">inserisci tre carte</h3>
                         </div>
@@ -21,7 +47,7 @@
 
 
                 <div class="row justify-content-md-center" id="bottoni" style="display: none;margin-left: 9em;">
-                    <button type="button" class="btn btn-outline-light" id="button" (click)='showTesti()'>scopri
+                    <button type="button" class="btn btn-outline-light" id="button" (click)="controlloLogin()">scopri
                         sulamore
                     </button>
 

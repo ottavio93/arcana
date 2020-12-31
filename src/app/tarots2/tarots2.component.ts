@@ -18,6 +18,7 @@ import { Router } from '@angular/router';
 import { ThrowStmt } from '@angular/compiler';
 import { HomeComponent } from '../home/home.component';
 import { HostListener } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 declare var $: any;
 
 @Component({
@@ -28,8 +29,24 @@ declare var $: any;
 export class Tarots2Component implements OnInit, OnDestroy {
   home: HomeComponent;
   ngOnInit() {}
-  constructor(private _router: Router) {}
+  constructor(private cookie: CookieService) {}
   tarokki = TUTTITAROKKI;
+
+  controlloLogin() {
+    console.log('funziona');
+    if (this.cookie.get('user') != 'ospite') {
+      this.showTesti();
+    } else {
+      var elem = document.getElementById('cookie');
+      elem.style.display = 'none';
+      var elem = document.getElementById('cookietext');
+      elem.style.display = 'inline-flex';
+
+      console.log('non puo gioare piu di una volta se non sei registrato');
+    }
+
+    this.cookie.set('user', 'ospite');
+  }
 
   tarokkinondoppiati = this.getRandomTaroks();
 
@@ -69,16 +86,12 @@ export class Tarots2Component implements OnInit, OnDestroy {
         event.currentIndex
       );
     }
-    if (this.done.length === 2) {
-      console.log('dsnhlkjdsngkhjdfbkj');
-      this.flip();
-    }
     if (this.done.length < 3) {
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,
         event.previousIndex,
-        event.currentIndex
+        event.previousIndex
       );
     }
   }
@@ -173,17 +186,9 @@ export class Tarots2Component implements OnInit, OnDestroy {
     var element = document.getElementById('sparisce');
     element.style.display = 'none';
   }
-  // ngOnDestroy() {}
-  reloadComponent() {
-    this._router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this._router.onSameUrlNavigation = 'reload';
-    this._router.navigate(['/']);
-  }
+
   @HostListener('unloaded')
   ngOnDestroy() {
     console.log('Items destroyed');
-    this._router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this._router.onSameUrlNavigation = 'reload';
-    this._router.navigate(['/']);
   }
 }

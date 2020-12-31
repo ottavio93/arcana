@@ -9,17 +9,4 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  verita = true;
-  aggiorna() {
-    if (this.verita) {
-      this.refreshPage();
-      this.verita = false;
-    }
-  }
-
-  refreshPage() {
-    window.location.reload();
-    console.log('fdg');
-  }
 }

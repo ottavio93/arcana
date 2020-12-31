@@ -60,8 +60,7 @@ div.container6 p {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.card .front {
-}
+
 .card .back {
   background-color: transparent;
   -webkit-transform: rotateY(180deg);

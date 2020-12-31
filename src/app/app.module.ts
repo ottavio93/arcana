@@ -56,6 +56,7 @@ import { Router } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,7 @@ import { FooterComponent } from './footer/footer.component';
     NgbModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   exports: [
     A11yModule,
