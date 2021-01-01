@@ -50,7 +50,7 @@ export class Tarots2Component implements OnInit, OnDestroy {
 
   tarokkinondoppiati = this.getRandomTaroks();
 
-  todo = this.tarokki;
+  todo = this.getRandomTaroks();
 
   done = [];
   spariscitesto() {
@@ -96,11 +96,6 @@ export class Tarots2Component implements OnInit, OnDestroy {
     }
   }
 
-  stampatrecarte() {
-    console.log('gggghghdddddddddddddddddddddddddddddddddddddddddddddddddaa');
-    console.log(this.done);
-  }
-
   flip() {
     console.log('grfgggggggggggggggggggggggggggggggggggggggggggggg');
     $('.card').toggleClass('flipped');
@@ -115,23 +110,11 @@ export class Tarots2Component implements OnInit, OnDestroy {
   futuro = this.tarokkinondoppiati[2].immagine;
 
   getRandomTaroks() {
-    let taroks = [];
-
-    let i = Math.floor(Math.random() * this.tarokki.length);
-    var passato = this.tarokki[i];
-    taroks[0] = passato;
-    this.tarokki.splice(i, 1);
-
-    let d = Math.floor(Math.random() * this.tarokki.length);
-    var presente = this.tarokki[d];
-    taroks[1] = presente;
-    this.tarokki.splice(d, 1);
-    var futuro = this.tarokki[Math.floor(Math.random() * this.tarokki.length)];
-
-    taroks[2] = futuro;
-
-    return taroks;
+    let tarocchiMischiati = this.tarokki;
+    tarocchiMischiati = tarocchiMischiati.sort(() => Math.random() - 0.5);
+    return tarocchiMischiati;
   }
+
   getAllTarots(array) {
     let tarocco;
     for (let index = 0; index < array.length; index++) {
@@ -190,5 +173,28 @@ export class Tarots2Component implements OnInit, OnDestroy {
   @HostListener('unloaded')
   ngOnDestroy() {
     console.log('Items destroyed');
+  }
+
+  get3RandomTaroks() {
+    let taroks = [];
+
+    let i = Math.floor(Math.random() * this.tarokki.length);
+    var passato = this.tarokki[i];
+    taroks[0] = passato;
+    this.tarokki.splice(i, 1);
+
+    let d = Math.floor(Math.random() * this.tarokki.length);
+    var presente = this.tarokki[d];
+    taroks[1] = presente;
+    this.tarokki.splice(d, 1);
+    var futuro = this.tarokki[Math.floor(Math.random() * this.tarokki.length)];
+
+    taroks[2] = futuro;
+
+    return taroks;
+  }
+  stampatrecarte() {
+    console.log('gggghghdddddddddddddddddddddddddddddddddddddddddddddddddaa');
+    console.log(this.done);
   }
 }
