@@ -23,13 +23,25 @@
 
 
 
-                    <div cdkDropList [cdkDropListData]="done" class="example-list2" (cdkDropListDropped)="drop($event)"
+                    <div cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="done" class="example-list2" (cdkDropListDropped)="drop($event)"
                         id="cookie">
                         <div id="messaggio">
                             <h3 id="demo" class="testoMagico">inserisci tre carte</h3>
                         </div>
-                        <div class="droptarget" class="example-box" *ngFor="let item of done" cdkDrag [cdkDragDisabled]="item">
-                            <div class="lines"><img [src]="item.immagine" width="160em"></div>
+                        <div class="droptarget" class="example-box" *ngFor="let item of done" cdkDrag [cdkDragDisabled]="item" style="padding-top: 0%;">
+                   
+                           
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-back">
+                                        <div class="lines"><img [src]="item.immagine" width="160em"></div>
+                                        
+                                    </div>
+                                    <div class="flip-box-front">
+                                       
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 

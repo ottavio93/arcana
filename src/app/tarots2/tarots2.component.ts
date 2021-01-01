@@ -91,7 +91,7 @@ export class Tarots2Component implements OnInit, OnDestroy {
         event.previousContainer.data,
         event.container.data,
         event.previousIndex,
-        event.previousIndex
+        event.currentIndex
       );
     }
   }
