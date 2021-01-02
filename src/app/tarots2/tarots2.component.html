@@ -39,7 +39,7 @@
                                         <div class="flip-box-front"><img [src]="item.immagine" width="160em"></div>
                                     
                                     <div class="flip-box-back">
-                                    <img src="../assets/images/cartaF.png" width="160em">
+                                      <img src="../assets/images/cartaF.png" width="160em">
                                     </div>
 </div>
                                 </div>
@@ -88,27 +88,25 @@
             </div>
 
         </div>
-        <div *ngIf="done.length>2">
-            <div id="testi" style="display:none">
-                <button type="button" onclick="location.href='#'" class="btn btn-outline-light" id="button"
-                    style="margin-left: 31em;position: fixed;">x
-                </button>
 
-                <div class="risultati" *ngIf="done[0].futuroAmore">
-                    <p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span
-                            class="testoMagico2">
-                            {{done[0].nome}}</span> ti dice:</p>{{done[0].passatoAmore }}<br>
-                    <p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span
-                            class="testoMagico2">{{done[1].nome}}</span> ti dice:</p>{{done[1].presenteAmore }}<br>
-                    <p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span
-                            class="testoMagico2">{{done[2].nome}}</span> ti dice:</p>{{done[2].futuroAmore }}<br>
-                </div>
-
-
-
-            </div>
         </div>
 
-
-
+<div class="d-flex justify-content-center">
+    </div><div id="testi" style="display:none">
+        <button type="button" onclick="location.href='#'" class="btn btn-outline-light" id="button"
+            style="margin-left: 31em;position: fixed;">x
+        </button>
+    
+        <div class="risultati" *ngIf="done[2]">
+            
+                <p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span class="testoMagico2">
+                        {{done[0].nome}}</span> ti dice:</p>{{done[0].passatoAmore }}<br>
+                <p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span
+                        class="testoMagico2">{{done[1].nome}}</span> ti dice:</p>{{done[1].presenteAmore }}<br>
+                <p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span
+                        class="testoMagico2">{{done[2].nome}}</span> ti dice:</p>{{done[2].futuroAmore }}<br>
+          
+        </div>
+    
+    </div>
     </div>
