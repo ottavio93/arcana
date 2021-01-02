@@ -1,5 +1,9 @@
 .lines {
-  display: revert;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
 
 .example-container {
@@ -165,7 +169,7 @@
   transform-style: preserve-3d;
 }
 
-.flip-box:hover .flip-box-inner {
+.flip-box-inner:hover {
   transform: rotateY(180deg);
 }
 

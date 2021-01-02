@@ -31,18 +31,16 @@
                         <div class="droptarget" class="example-box" *ngFor="let item of done" cdkDrag [cdkDragDisabled]="item" style="padding-top: 0%;">
                    
                            
-                            <div class="flip-box">
-                                <div class="flip-box-inner">
-                                    <div class="flip-box-back">
-                                        <div class="lines"><img [src]="item.immagine" width="160em"></div>
-                                        
-                                    </div>
-                                    <div class="flip-box-front">
-                                       
-                                    </div>
-                                </div>
-                            </div>
+                         
+                        <div *ngIf="done.length==3; else elseTemplate">
+                        <div class="flip-box-inner"><img [src]="item.immagine" width="160em"></div>
                         </div>
+                        
+                        <ng-template #elseTemplate>
+                            <div>
+                            <div class="flip-box-inner"> <img src="../assets/images/cartaF.png" width="160em"></div>
+                            </div>
+                        </ng-template>
 
 
                     </div>
