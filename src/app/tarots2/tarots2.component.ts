@@ -27,11 +27,20 @@ declare var $: any;
   styleUrls: ['./tarots2.component.css'],
 })
 export class Tarots2Component implements OnInit, OnDestroy {
-  home: HomeComponent;
   ngOnInit() {}
   constructor(private cookie: CookieService) {}
+  //###########  tarokki presi  da data.ts ''ildatabase dei tarokki####################
   tarokki = TUTTITAROKKI;
 
+  //###########  tarokki presi  da data.ts ''ildatabase dei tarokki####################
+  tarokkinondoppiati = this.getRandomTaroks();
+
+  //########### done e todo sono gli array con le carte. todo è quello con tutte le carte mischiate coperte
+  // mentre il done è l'array che si riempe con le tre carte che lutente ha droppato ####################
+  todo = this.getRandomTaroks();
+  done = [];
+
+  //########### funzione che resistuisce i testi solo se non è in memoria il cookie guest####################
   controlloLogin() {
     console.log('funziona');
     if (this.cookie.get('user') != 'ospite') {
@@ -48,27 +57,7 @@ export class Tarots2Component implements OnInit, OnDestroy {
     this.cookie.set('user', 'ospite');
   }
 
-  tarokkinondoppiati = this.getRandomTaroks();
-
-  todo = this.getRandomTaroks();
-
-  done = [];
-  spariscitesto() {
-    var elem = document.getElementById('messaggio');
-    elem.style.display = 'none';
-    console.log('e sparito');
-  }
-  spariscibottone() {
-    var elem = document.getElementById('bottoni');
-    elem.style.display = 'flex';
-    console.log('e sparito');
-  }
-
-  drag(event: CdkDrag<string[]>) {
-    event._dragRef;
-    this.spariscitesto();
-  }
-
+  //########### funzione importanteee del drag and drop usando angular material ####################
   drop(event: CdkDragDrop<string[]>) {
     if (this.done.length > 1) {
       this.spariscibottone();
@@ -96,72 +85,28 @@ export class Tarots2Component implements OnInit, OnDestroy {
     }
   }
 
-  flip() {
-    console.log('grfgggggggggggggggggggggggggggggggggggggggggggggg');
-    $('.card').toggleClass('flipped');
-  }
-
-  flip2() {
-    $('.card').toggleClass('flipped');
-  }
-
-  passato = this.tarokkinondoppiati[0].immagine;
-  presente = this.tarokkinondoppiati[1].immagine;
-  futuro = this.tarokkinondoppiati[2].immagine;
-
+  //########### funzione importante mi restituise un array con gli oggetti michiati a random ####################
   getRandomTaroks() {
     let tarocchiMischiati = this.tarokki;
     tarocchiMischiati = tarocchiMischiati.sort(() => Math.random() - 0.5);
     return tarocchiMischiati;
   }
 
-  getAllTarots(array) {
-    let tarocco;
-    for (let index = 0; index < array.length; index++) {
-      tarocco = array[index];
-      console.log(tarocco);
-    }
-
-    console.log(tarocco.immagine);
-    return tarocco;
+  //########### funzione  che fa sparire il testo nella casella sopra una volta iniziato il drag ####################
+  spariscitesto() {
+    var elem = document.getElementById('messaggio');
+    elem.style.display = 'none';
+    console.log('e sparito');
   }
 
-  evenPredicate(items: CdkDrag<object>[]) {
-    return items.length < 3;
-  }
-  noReturnPredicate() {
-    return false;
-  }
-
-  // @Output('cdkDragEntered')
-  // entered: EventEmitter<CdkDragEnter<any>>;
-  // specialUseCase(drag?: CdkDrag, drop?: CdkDrop) {
-  //   if (drop.data.length <= 2) {
-  //     console.log(
-  //       "Can't drop you because there aren't enough items in 'Active'"
-  //     );
-  //     return false;
-  //   }
-  //
-
-  nome() {
-    var message;
-    if (typeof this.done[0].nome !== undefined) message = this.done[0].nome;
-
-    return message;
+  //########### funzione  che fa apparire i bottoni una volta che ci sono letre carte draggte ####################
+  spariscibottone() {
+    var elem = document.getElementById('bottoni');
+    elem.style.display = 'flex';
+    console.log('e sparito');
   }
 
-  frin2() {
-    var message1;
-    if (typeof this.done[1].futuroAmore !== undefined)
-      message1 = this.done[1].passatoAmore;
-    else {
-      message1 = 'caro';
-    }
-    console.log('e arivato dai');
-    return message1;
-  }
-
+  //########### funzione  che fa apparire i testi  dei tarokki una volta premuto il bottone scorpi ####################
   showTesti() {
     var testi = document.getElementById('testi');
     testi.style.display = 'flex';
@@ -170,31 +115,96 @@ export class Tarots2Component implements OnInit, OnDestroy {
     element.style.display = 'none';
   }
 
+  //########### metodi in lavorazione ####################
+  flip() {
+    console.log('grfgggggggggggggggggggggggggggggggggggggggggggggg');
+    $('.card').toggleClass('flipped');
+  }
+
+  nome() {
+    var message;
+    if (typeof this.done[0].nome !== undefined) message = this.done[0].nome;
+
+    return message;
+  }
+
+  async stampatrecarte() {
+    (await this.done.length) == 3;
+    console.log('funione asicrona');
+    console.log(this.done);
+  }
+
   @HostListener('unloaded')
   ngOnDestroy() {
     console.log('Items destroyed');
   }
-
-  get3RandomTaroks() {
-    let taroks = [];
-
-    let i = Math.floor(Math.random() * this.tarokki.length);
-    var passato = this.tarokki[i];
-    taroks[0] = passato;
-    this.tarokki.splice(i, 1);
-
-    let d = Math.floor(Math.random() * this.tarokki.length);
-    var presente = this.tarokki[d];
-    taroks[1] = presente;
-    this.tarokki.splice(d, 1);
-    var futuro = this.tarokki[Math.floor(Math.random() * this.tarokki.length)];
-
-    taroks[2] = futuro;
-
-    return taroks;
-  }
-  stampatrecarte() {
-    console.log('gggghghdddddddddddddddddddddddddddddddddddddddddddddddddaa');
-    console.log(this.done);
-  }
 }
+// home: HomeComponent;
+// passato = this.tarokkinondoppiati[0].immagine;
+// presente = this.tarokkinondoppiati[1].immagine;
+// futuro = this.tarokkinondoppiati[2].immagine;
+
+// @Output('cdkDragEntered')
+// entered: EventEmitter<CdkDragEnter<any>>;
+// specialUseCase(drag?: CdkDrag, drop?: CdkDrop) {
+//   if (drop.data.length <= 2) {
+//     console.log(
+//       "Can't drop you because there aren't enough items in 'Active'"
+//     );
+//     return false;
+//   }
+//
+
+//funzione che mi potrebbe servire
+
+// drag(event: CdkDrag<string[]>) {
+//   event._dragRef;
+//   this.spariscitesto();
+// }
+
+// frin2() {
+//   var message1;
+//   if (typeof this.done[1].futuroAmore !== undefined)
+//     message1 = this.done[1].passatoAmore;
+//   else {
+//     message1 = 'caro';
+//   }
+//   console.log('e arivato dai');
+//   return message1;
+// }
+
+// get3RandomTaroks() {
+//   let taroks = [];
+
+//   let i = Math.floor(Math.random() * this.tarokki.length);
+//   var passato = this.tarokki[i];
+//   taroks[0] = passato;
+//   this.tarokki.splice(i, 1);
+
+//   let d = Math.floor(Math.random() * this.tarokki.length);
+//   var presente = this.tarokki[d];
+//   taroks[1] = presente;
+//   this.tarokki.splice(d, 1);
+//   var futuro = this.tarokki[Math.floor(Math.random() * this.tarokki.length)];
+
+//   taroks[2] = futuro;
+
+//   return taroks;
+// }
+// getAllTarots(array) {
+//   let tarocco;
+//   for (let index = 0; index < array.length; index++) {
+//     tarocco = array[index];
+//     console.log(tarocco);
+//   }
+
+//   console.log(tarocco.immagine);
+//   return tarocco;
+// }
+
+// evenPredicate(items: CdkDrag<object>[]) {
+//   return items.length < 3;
+// }
+// noReturnPredicate() {
+//   return false;
+// }
