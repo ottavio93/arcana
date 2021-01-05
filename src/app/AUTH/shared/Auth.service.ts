@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { SignupRequestPayload } from '../signup/SignupRequestPayload';
 import { Observable, throwError } from 'rxjs';
 import { LocalStorageService } from 'ngx-webstorage';
+import { LoginRequestPayload } from '../login/login-request.payload';
+import { LoginResponse } from '../login/login-response.payload';
 import { map, tap } from 'rxjs/operators';
 
 @Injectable({
@@ -30,28 +32,28 @@ export class AuthService {
     );
   }
 
-  // login(loginRequestPayload: LoginRequestPayload): Observable<boolean> {
-  //   return this.httpClient
-  //     .post<LoginResponse>(
-  //       'http://localhost:8080/api/auth/login',
-  //       loginRequestPayload
-  //     )
-  //     .pipe(
-  //       map((data) => {
-  //         this.localStorage.store(
-  //           'authenticationToken',
-  //           data.authenticationToken
-  //         );
-  //         this.localStorage.store('username', data.username);
-  //         this.localStorage.store('refreshToken', data.refreshToken);
-  //         this.localStorage.store('expiresAt', data.expiresAt);
+  login(loginRequestPayload: LoginRequestPayload): Observable<boolean> {
+    return this.httpClient
+      .post<LoginResponse>(
+        'http://localhost:8080/api/auth/login',
+        loginRequestPayload
+      )
+      .pipe(
+        map((data) => {
+          this.localStorage.store(
+            'authenticationToken',
+            data.authenticationToken
+          );
+          this.localStorage.store('username', data.username);
+          this.localStorage.store('refreshToken', data.refreshToken);
+          this.localStorage.store('expiresAt', data.expiresAt);
 
-  //         this.loggedIn.emit(true);
-  //         this.username.emit(data.username);
-  //         return true;
-  //       })
-  //     );
-  // }
+          this.loggedIn.emit(true);
+          this.username.emit(data.username);
+          return true;
+        })
+      );
+  }
 
   getJwtToken() {
     return this.localStorage.retrieve('authenticationToken');

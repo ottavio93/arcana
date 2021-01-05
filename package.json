@@ -1,7 +1,9 @@
 {
   "name": "arcana",
   "version": "0.0.0",
+  "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
   "scripts": {
+    "postinstall": "ngcc --properties es5 browser module main --first-only",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -9,8 +11,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  
   "private": true,
   "dependencies": {
+     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "@angular/animations": "^10.2.4",
     "@angular/cdk": "^10.2.7",
     "@angular/common": "~10.0.6",
@@ -37,9 +41,9 @@
     "@angular-devkit/build-angular": "~0.1000.5",
     "@angular/cli": "~10.0.5",
     "@angular/compiler-cli": "~10.0.6",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.19.12",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -53,4 +57,5 @@
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
   }
+ 
 }

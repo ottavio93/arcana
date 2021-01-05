@@ -62,6 +62,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { SignupComponent } from './AUTH/signup/signup.component';
+import { LoginComponent } from './AUTH/login/login.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,8 @@ import { SignupComponent } from './AUTH/signup/signup.component';
     FooterComponent,
 
     SignupComponent,
+
+    LoginComponent,
   ],
   imports: [
     NgxWebstorageModule.forRoot(),
