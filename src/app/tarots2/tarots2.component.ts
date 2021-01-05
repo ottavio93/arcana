@@ -32,9 +32,6 @@ export class Tarots2Component implements OnInit, OnDestroy {
   //###########  tarokki presi  da data.ts ''ildatabase dei tarokki####################
   tarokki = TUTTITAROKKI;
 
-  //###########  tarokki presi  da data.ts ''ildatabase dei tarokki####################
-  tarokkinondoppiati = this.getRandomTaroks();
-
   //########### done e todo sono gli array con le carte. todo è quello con tutte le carte mischiate coperte
   // mentre il done è l'array che si riempe con le tre carte che lutente ha droppato ####################
   todo = this.getRandomTaroks();

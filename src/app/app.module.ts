@@ -53,10 +53,15 @@ import { SphereComponent } from './sphere/sphere.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Tarots2Component } from './tarots2/tarots2.component';
 import { Router } from '@angular/router';
-
+import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { CookieService } from 'ngx-cookie-service';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxWebstorageModule } from 'ngx-webstorage';
+import { SignupComponent } from './AUTH/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -69,11 +74,14 @@ import { CookieService } from 'ngx-cookie-service';
     HomeComponent,
 
     FooterComponent,
+
+    SignupComponent,
   ],
   imports: [
+    NgxWebstorageModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
-
+    HttpClientModule,
     AppRoutingModule,
     CdkStepperModule,
     CdkTableModule,
@@ -84,9 +92,12 @@ import { CookieService } from 'ngx-cookie-service';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
+
   exports: [
     A11yModule,
     ClipboardModule,
