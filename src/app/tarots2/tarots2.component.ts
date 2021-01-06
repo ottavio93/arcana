@@ -19,6 +19,7 @@ import { ThrowStmt } from '@angular/compiler';
 import { HomeComponent } from '../home/home.component';
 import { HostListener } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { AuthService } from '../AUTH/shared/Auth.Service';
 declare var $: any;
 
 @Component({
@@ -27,8 +28,25 @@ declare var $: any;
   styleUrls: ['./tarots2.component.css'],
 })
 export class Tarots2Component implements OnInit, OnDestroy {
-  ngOnInit() {}
-  constructor(private cookie: CookieService) {}
+  isLoggedIn: boolean;
+  username: string;
+  constructor(
+    private cookie: CookieService,
+    private authService: AuthService,
+    private router: Router
+  ) {}
+
+  ngOnInit() {
+    this.authService.loggedIn.subscribe(
+      (data: boolean) => (this.isLoggedIn = data)
+    );
+    this.authService.username.subscribe(
+      (data: string) => (this.username = data)
+    );
+    this.isLoggedIn = this.authService.isLoggedIn();
+    this.username = this.authService.getUserName();
+  }
+
   //###########  tarokki presi  da data.ts ''ildatabase dei tarokki####################
   tarokki = TUTTITAROKKI;
 
@@ -39,6 +57,13 @@ export class Tarots2Component implements OnInit, OnDestroy {
 
   //########### funzione che resistuisce i testi solo se non è in memoria il cookie guest####################
   controlloLogin() {
+    if (this.username != null) {
+      this.showTesti();
+      console.log(
+        'ciaooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'
+      );
+    }
+
     console.log('funziona');
     if (this.cookie.get('user') != 'ospite') {
       this.showTesti();
