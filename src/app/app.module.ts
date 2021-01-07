@@ -94,6 +94,7 @@ import { LoginComponent } from './AUTH/login/login.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+
     BrowserAnimationsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),

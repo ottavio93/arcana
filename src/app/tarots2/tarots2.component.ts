@@ -107,11 +107,13 @@ export class Tarots2Component implements OnInit, OnDestroy {
     }
   }
 
-  //########### funzione importante mi restituise un array con gli oggetti michiati a random ####################
+  //########### funzione importante mi restituise un array con gli oggetti mischiati a random ####################
   getRandomTaroks() {
     let tarocchiMischiati = this.tarokki;
+    let tarokkilimitati;
     tarocchiMischiati = tarocchiMischiati.sort(() => Math.random() - 0.5);
-    return tarocchiMischiati;
+    tarokkilimitati = tarocchiMischiati.slice(0, 14);
+    return tarokkilimitati;
   }
 
   //########### funzione  che fa sparire il testo nella casella sopra una volta iniziato il drag ####################

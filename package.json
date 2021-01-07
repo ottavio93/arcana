@@ -11,10 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  
   "private": true,
   "dependencies": {
-     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "@angular/animations": "^10.2.4",
     "@angular/cdk": "^10.2.7",
     "@angular/common": "~10.0.6",
@@ -26,13 +24,26 @@
     "@angular/platform-browser": "~10.0.6",
     "@angular/platform-browser-dynamic": "~10.0.6",
     "@angular/router": "~10.0.6",
+    "@fortawesome/angular-fontawesome": "^0.7.0",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/pro-duotone-svg-icons": "^5.13.0",
+    "@fortawesome/pro-light-svg-icons": "^5.13.0",
+    "@fortawesome/pro-regular-svg-icons": "^5.13.0",
+    "@fortawesome/pro-solid-svg-icons": "^5.13.0",
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
+    "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.5.3",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "ngx-cookie-service": "^11.0.2",
     "ngx-toastr": "^13.2.0",
     "ngx-webstorage": "^7.0.1",
     "ngx-webstorage-service": "^4.1.0",
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
@@ -57,5 +68,4 @@
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
   }
- 
 }

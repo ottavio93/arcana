@@ -214,83 +214,93 @@ export const TUTTITAROKKI: TarotService[] = [
     passatoSalute: 'tufrate',
     passatoAmore: 'tusoreta',
   },
+  {
+    nome: 'morte',
+
+    punteggio: -192,
+    immagine: '../assets/images/deck/13_Death.jpg',
+
+    futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore:
+      'La morte suggerisce una completa separazione tra passato e futuro e molto probabilmente sarà dolorosa. Nonostante il senso di perdita associato, la Morte svolge un ruolo naturale e importante nella vita, portando infine all accettazione. È una parte necessaria per andare avanti e vedrai che i cambiamenti sono più facili se li accetti invece di combatterli. Tutte le cose cambiano nel tempo e anche il tuo destino in questo mondo cambierà.',
+    presenteSalute: `La carta della Morte nei Tarocchi mostra alcuni cambiamenti drammatici che potrebbero avvenire per poi portare ad un nuovo inizio. È spesso associato a qualche forma di perdita, fallimento o distruzione. Il tono generale di questa lettera è oscuro e per niente buono. Pertanto, la tua risposta è no! Un evento importante si sta avvicinando e arriverà inaspettatamente. Attenzione perderai qualcosa di valore.`,
+    passatoSalute: 'tufrate',
+    passatoAmore: 'tusoreta',
+  },
+  {
+    nome: 'temperanza',
+
+    punteggio: 192,
+    immagine: '../assets/images/deck/14_Temperance.jpg',
+
+    futuroAmore: `La carta della Temperanza suggerisce l'intervento divino, l'equilibrio e l'armonia. La presenza generalmente positiva di questa carta nel tuo tiro rivela alti livelli di autostima e controllo nei tuoi sforzi. La risposta che questa carta ti dà è molto probabilmente sì. Prendi il controllo della tua vita e pratica la moderazione. Rimanendo in equilibrio risolverai qualsiasi conflitto attuale e inizierai un nuovo capitolo della tua vita.`,
+
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: `La Temperanza nei Tarocchi è una carta ottimista che ti incoraggia a trovare un equilibrio nella tua vita e ad affrontare i problemi con un atteggiamento calmo. Riconosce che le forze opposte non hanno bisogno di essere in guerra dentro di te. Segui attentamente tutte le decisioni importanti che prendi. Fidati che le buone decisioni porteranno a un risultato positivo per te. Finalmente arriverà qualcosa che hai desiderato a lungo. Aspettati di sviluppare una fruttuosa collaborazione o un matrimonio nel tuo circolo sociale immediato.`,
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: `La carta della Temperanza è una maestra della moderazione. Hai una serie di qualità equilibrate e la carta della Temperanza incarna questo aspetto della tua natura. Ad esempio, nonostante tu sia sensibile, hai eccellenti capacità analitiche. E sebbene tu sia riservato, hai le abilità di una persona forte e solide relazioni sociali. In passato, hai dimostrato di poter essere affidabile per portare a termine i lavori in tempo. Ma hai anche la tendenza a sottovalutare i tuoi risultati, il che significa che il lavoro che fai a volte non viene riconosciuto.`,
+  },
+  {
+    nome: 'diavolo',
+
+    punteggio: -92,
+    immagine: '../assets/images/deck/15_Devil.jpg',
+
+    futuroAmore: `È giunto il momento per te di trovare la bellezza dentro te stesso e smettere di proiettare quelle immagini ad altri nel mondo. Trova il coraggio di cambiare la tua vita. Il corso della tua vita è al di là delle tue conoscenze, ma la conoscenza supererà le tue illusioni.`,
+
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: `Il Diavolo nei Tarocchi è la carta per eccellenza che parla di tutte le cose negative. Rabbia, violenza, tentazione, paura e dubbio sono solo alcuni dei sentimenti associati a questa figura. Suggerisce che forse sei intrappolato in una relazione folle, una dipendenza o una bugia. Senza dubbio, questa lettera dice di no. C'è un evento fuori dal tuo controllo che cambierà la tua vita. Non si sa se sarà nel bene o nel male, ma è necessario evitare comportamenti stravaganti e rimanere fedeli a se stessi.`,
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: `Una delle scelte che hai fatto per te era sbagliata. Le forze negative ti stanno trattenendo.`,
+  },
+  {
+    nome: 'torre',
+
+    punteggio: -92,
+    immagine: '../assets/images/deck/16_Tower.jpg',
+
+    futuroAmore: `È giunto il momento per te di trovare la bellezza dentro te stesso e smettere di proiettare quelle immagini ad altri nel mondo. Trova il coraggio di cambiare la tua vita. Il corso della tua vita è al di là delle tue conoscenze, ma la conoscenza supererà le tue illusioni.`,
+
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: `La carta della Torre nei Tarocchi parla di eventi imprevisti e cambiamenti che si verificheranno nella tua vita. Tuttavia, questi cambiamenti non sono catastrofici, disastrosi ma generalmente potrebbero essere negativi. Potrebbe essere correlato a qualche tipo di incidente, ritardo o danno in una qualsiasi area della tua vita. La risposta che questa carta ti dà è no. Un conflitto sta raggiungendo un punto critico nella tua vita. Le relazioni dovranno essere rivalutate e ristrutturate per mantenerle.`,
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: `Resistendo alle sfide imminenti, il tuo futuro sarà brillante. Devi vedere le cose come vuoi che siano per trasformarle in quel modo. Sapere che il peggio è finito ti darà forza.`,
+  },
+  {
+    nome: 'stella',
+
+    punteggio: -92,
+    immagine: '../assets/images/deck/17_Star.jpg',
+
+    futuroAmore: `Si sta avvicinando il momento del rinnovo. Hai scelto la strada giusta per ripristinare la tua salute mentale e fisica. Essendo abbastanza coraggioso da percorrere le strade più rischiose ispirerai anche le persone intorno a te.`,
+
+    futuroLavoro: 'rgrt',
+    futuroSalute: 'tuzia',
+    passatoLavoro: 'tufrate',
+    presenteLavoro: 'tuzio',
+    presenteAmore: `Le Stelle nei Tarocchi simboleggia la speranza, il rinnovamento e la bellezza. Suggerisce un periodo di calma spirituale, felicità e opportunità positive. Il significato generale di questa carta è ottimismo e serenità. La risposta che suggerisce la loro presenza è sì. Tieni conto dell'equilibrio e della moderazione quando trovi soluzioni ai tuoi problemi attuali. La quantità di aiuto e incoraggiamento che riceverai porterà armonia e felicità alle tue cerchie.`,
+    presenteSalute: 'tumaa',
+    passatoSalute: 'tufrate',
+    passatoAmore: `La carta delle Stelle è l'incarnazione della speranza, un'influenza calmante che offre ottimismo e ispirazione. Quando trovi una causa che accende la tua immaginazione, porti un'energia che spesso ti spinge sotto i riflettori e la carta Stella incarna questo aspetto di te. In passato, le tue soluzioni originali ti hanno reso un leader tra i coetanei, ma dato il tuo amore per l'indipendenza, non è sempre questo che avresti voluto essere. Apprezzi la libertà di essere innovativo e talvolta questo ti ha portato a sentirti abbattuto o intrappolato in svariate routine e aspetti amministrativi della leadership.`,
+  },
 ];
 
-// {
-//   name: `Il Mago`,
-//   imgUrl: `../assets/images/deck/il_mago.png`,
-//   letturaPassato:`La carta del Mago ricorda che sei un essere unico e che hai molti doni che gli altri non possiedono. Sei inventivo e creativo e il Mago incarna queste qualità. In passato, ti sei concentrato in modo particolare sull'originalità e sui risultati efficienti. Tuttavia, questo può renderti incline ad analizzare eccessivamente i tuoi pensieri e le tue teorie, fino al punto in cui puoi ristagnare nei dubbi su te stesso.`,
-//   letturaPresente:`Generalmente il Mago nei Tarocchi si associa a comunicatori intelligenti e abili. La tua presenza indica che hai un livello di sicurezza e determinazione che ti consente di tradurre le idee in azioni. Questa è una carta molto pratica le cui rivelazioni sono meglio applicate agli aspetti pragmatici e fisici della tua vita, ma non in quelli teorici o effimeri. Il tuo successo negli sforzi futuri in politica o affari dipenderà dalla tua forza di volontà e dalla tua determinazione. In questo momento, le tue capacità e conoscenze sono necessarie per influenzare i cambiamenti che si stanno verificando. Per rendere questi cambiamenti utili, devi sapere come giocare bene le tue carte.`,
-//   letturaFuturo:`Il tuo futuro è incerto, presenta rischi e opportunità. Le possibilità saranno influenzate dalle amicizie che hai coltivato e dal sostegno che ricevi dai tuoi cari. Potrebbe trattarsi di un nuovo inizio positivo. Il mago nei tarocchi simboleggia l'azione e il potere nella tua vita. Le sue connotazioni positive indicano qualcuno che è un buon lavoratore ed è bravo in tutti gli aspetti della comunicazione. Questa carta suggerisce di usare la tua forza di volontà per andare avanti e agire. La risposta alla tua domanda è sì.`,
-// },
-// {
-//   name: `La Papessa`,
-//   imgUrl: `../assets/images/deck/la_papessa.png`,
-
-// },
-// {
-//   name: `L'Imperatrice`,
-//   imgUrl: `../assets/images/deck/l_imperatrice.png`,
-//   letturaPassato:`Profondamente connesso a Madre Natura, l'Imperatrice è una sostenitrice dell'assorbimento dell'energia del mondo che ti circonda. Sei più ispirato dalle idee emergenti e dalle persone che ti circondano, e la carta dell'Imperatrice incarna queste qualità. In passato ti sei reinventato e hai sperimentato nuove prospettive, cambiando spesso con le stagioni. Questa espressione di sé in continua evoluzione emana un senso di spontaneità che a volte ti ha fatto sembrare imprevedibile, anche agli amici intimi e ai tuoi cari.`,
-//   letturaPresente:`Potrebbe esserci un nuovo inizio che si sta aprendo davanti a te e solo tu puoi decidere come andrà. Devi essere comprensivo e particolarmente sensibile agli aspetti emotivi della vita. Una persona amata avrà bisogno di una mano o di una luce nell'oscurità, sarà il tuo ruolo aiutarla, indipendentemente dalla tua scelta.`,
-//   letturaFuturo:`Il futuro ti darà respiro e guarirà le tue ferite emotive e fisiche. Trascorrere del tempo a percorrere nuovi sentieri sarà più utile che riparare le situazioni pregresse. I tuoi investimenti daranno i loro frutti se presterai la dovuta attenzione. L'imperatrice rappresenta tutto ciò che è materno. Risolve problemi d'amore, indica sforzi in affari di successo e altre opportunità positive o produttive. Lei suggerisce di andare avanti per raggiungere il tuo pieno potenziale e la risposta che stai cercando è sì.`,
-// },
-// {
-//   name: `L'Imperatore`,
-//   imgUrl: `../assets/images/deck/l_imperatore.png`,
-//   letturaPassato:`L'Imperatore è una carta autorevole, di potere e forza. Sei un leader naturale, pieno di passione e carisma e la carta dell'Imperatore incarna queste qualità. In passato, sei stato un faro di autenticità e altruismo, senza paura di alzarti e parlare quando sentivi che qualcosa doveva essere detto. Ma a volte puoi anche esagerare con il tuo ottimismo, spingendo gli altri più in là di quanto sono pronti o disposti ad andare.`,
-//   letturaPresente:`Si sta avvicinando il momento in cui qualcuno in una posizione autorevole ti offre il suo aiuto. In ogni caso, lasciati guidare da chi ti viene in aiuto poichè si tratta di una persona più esperta di cui hai bisogno. Stai attento a non sbagliare nei confronti delle persone che dipendono troppo da te.`,
-//   letturaFuturo:`Le influenze dell'Imperatore sono positive e suggeriscono che potresti essere in via di promozione o avanzamento. Qualunque sia l'impeto del cambiamento, indica che puoi avere una forza interiore fuori dall'ordinario che ti aiuterà ad agire e ti guiderà. Prendere l'iniziativa può avvicinarti al tuo obiettivo, ma solo se sei in grado di essere responsabile delle tue azioni. Ti verrà data l'opportunità di gestire una delle tante situazioni della vita che aspettavi da tempo. Non lasciare indietro le persone che ti seguono.`,
-
-// },
-// {
-//   name: `Il Papa`,
-//   imgUrl: `../assets/images/deck/il_papa.png`,
-//   letturaPassato:`Il Papa è un messaggero dei cieli esperto nella guida. Sei un capogruppo naturale, pieno di passione ed energia, e la carta Ierofante incarna queste qualità. In passato, hai dimostrato un'abilità unica nel notare piccoli cambiamenti o motivi sottostanti che gli altri non vedono. Le tue acute osservazioni ti hanno naturalmente portato a essere quello che fa spesso domande, ma a volte altri lo trovano scoraggiante, dandoti la reputazione di qualcuno che mette in dubbio l'autorità.`,
-//   letturaPresente:`Un'opportunità di lavoro o di studio sta arrivando grazie all'aiuto di un superiore. In altri casi potrebbe significare, nel caso in cui tu stia sbagliando qualcosa che lo puoi fare poichè tutti commettono errori.`,
-//   letturaFuturo:`Per raggiungere il successo devi fare affidamento su un'organizzazione solida e su principi strutturati. Le tue azioni devono essere motivate da ragioni al di là del tuo istinto, altrimenti i tuoi risultati non saranno eccezionali come potrebbero essere. Il Papa è un simbolo di educazione e tradizione. Questo tarocco ti suggerisce di cercare una guida o un consiglio spirituale nella tua vita. È anche un'indicazione dell'approvazione religiosa. Questa carta non ha connotazione negativa o positiva. Ad una domana precisa la risposta è forse.`,
-
-// },
-// {
-//   name: `Gli Amanti`,
-//   imgUrl: `../assets/images/deck/gli_amanti.png`,
-//   letturaPassato:`Essere più in sintonia con te ti darà la capacità di connetterti meglio con gli altri. Il peso emotivo di un recente conflitto aumenterà rapidamente e porterà a una risoluzione di successo. Gli Amanti possono riguardare una relazione che può essere affettiva, familiare ma anche la formazione di associazioni negli affari, sta a te dare una corrispondenza adeguata al tuo caso. Il lato negativo di questa carta potrebbe essere l'evidenza di un errore di scelta fatto al momento in cui hai preso una decisione, o un momento di pressioni e tensioni esterne. Se saprai mantenere la calma e agire saggiamente, troverai la soluzione migliore.`,
-//   letturaPresente:`Si tratta di un conflitto che peserà i tuoi valori. Per poter progredire dovrai prendere una decisione tra l'amore e la tua carriera, ma la decisione determinerà le tue priorità. Forse è un periodo in cui sei molto preso da un progetto di relazione a cui sei interessato o da un'unione che potrebbe nascere in qualsiasi momento. Pertanto, è tempo per te di pensare con calma e chiarezza e di analizzare ciò che è meglio per te, solo tu saprai come prendere la decisione in risposta al fatto che questa relazione è davvero ciò che desideri per la tua vita.`,
-//   letturaFuturo:`Ti sarà utile ricordare che gli opposti sono i due lati di una stessa medaglia e che non esiste una condizione senza il suo opposto, quindi la decisione corretta può essere presa solo se si accetta l'esistenza di entrambe le corrispondenze. Solitamente Gli Amanti nei Tarocchi rappresenta anche l'emergere di una nuova opportunità, o se sei una persona impegnata, sarà il momento di decidere se è tempo di staccarti e questa potrebbe essere l'occasione giusta. Gli Amanti suggerisce che ti trovi ad un bivio in alcuni aspetti della tua vita. Anche se questa carta simboleggia relazioni, amore e unità, potrebbe anche rivelare un'alleanza positiva negli affari, magari che stai formando una squadra per far progredire la tua vita. La risposta alla tua domanda è Si.`,
-
-// },
-// {
-//   name: `Il Carro`,
-//   imgUrl: `../assets/images/deck/il_carro.png`,
-//   letturaPassato:`La carta del Carro è collegata alla tua spinta naturale e alla tua determinazione. Spingi i tuoi obiettivi con pura forza di volontà dove gli altri potrebbero arrendersi e andare avanti e la carta Carro incarna proprio questo concetto. Nel passato, hai ottenuto grandi risultati comunicando in modo dominante e potente, ma a volte questo ti ha portato a sopraffare gli altri che sono più timidi e sensibili di te.`,
-//   letturaPresente:`Generalmente quando esce la carta del Carro dei Tarocchi signigica che hai un duro lavoro davanti a te e che non sempre può essere risolto rapidamente, poichè Il Carro è una carta forte, potresti attraversare in questo periodo strade lunghe e difficili, pendenze in salita, vicoli ciechi e battute d'arresto dolorose. Un buon risultato può essere garantito solo se la carta è in piedi. Ma non perdere la speranza. Questa strada difficile ti ispirerà con un forte senso dello scopo, la capacità di avere successo attraverso l'organizzazione, la resistenza e la fiducia e solo coloro che hanno fatto qualcosa che non credevano possibile, ne trarranno vantaggio, poche persone possono affrontare fatiche simili. Buone notizie stanno arrivando e sconfiggerai l'opposizione con una vittoria decisiva.`,
-//   letturaFuturo:`Continua la tua lotta e otterrai il risultato che ti aspetti. Onore, consensi e riconoscimenti sono possibili risultati che otterrai se non ti dimetti.`,
-
-// },
-// {
-//   name: `La Forza`,
-//   imgUrl: `../assets/images/deck/la_forza.png`,
-//   letturaPassato:`La carta della Forza rappresenta la tua forza d'animo, il coraggio e la capacità generale di resistere a tutto ciò che la vita ti offre. Sebbene tu possa essere percepito come calmo, riservato o persino timido, hai una fiamma interiore e una passione che possono davvero brillare e la carta Forza incarna questo concetto. In passato, sei stato spesso guidato da principi, non da ricompense e punizioni. Tuttavia, non tutti capiscono questo approccio orientato al valore e questo a volte ti ha portato a sentirti incompreso.`,
-//   letturaPresente:`La carta della Forza nei Tarocchi mostra una presenza di autostima e fiducia nell'affrontare i problemi della tua vita. Suggerisce che sei una persona che gode del potere e che ha la capacità di esercitare l'autocontrollo in ogni momento. Forza e pazienza possono essere necessarie nelle tue attività. La risposta che stai cercando è probabilmente sì. Non rifiutare alcuna offerta che cambierà il tuo futuro. Abbi fiducia nelle tue convinzioni e sii abbastanza forte da fidarti di ciò che verrà.`,
-//   letturaFuturo:`C'è una grande liberazione energetica nel tuo futuro che ti guiderà verso maggiori cambiamenti nella tua vita. Comprendendo ciò che vali, trarrai il massimo vantaggio da questa meravigliosa opportunità per migliorare la tua vita.`,
-
-// },
-// {
-//   name: `L'Eremita`,
-//   imgUrl: `../assets/images/deck/l_eremita.png`,
-//   letturaPassato:`L'Eremita sa che l'unico modo per elaborare ciò che sta accadendo nella vita è ritirarsi dal rumore del mondo e creare uno spazio tranquillo di solitudine. Sei un pensatore indipendente che spesso scopre di lavorare meglio da solo e la carta dell'Eremita incarna questo modo di essere. Dimostrate spesso una razionalità efficiente con il vostro pensiero strategico, ma a volte questo ha avuto un prezzo in passato: sebbene sia probabile che chiunque altro provi sentimenti profondi, a volte è stato difficile prestare attenzione alle proprie emozioni ed esprimerle agli altri.`,
-//   letturaPresente:`L'Eremita è una carta che simboleggia una ricerca di illuminazione spirituale. L'introspezione e la contemplazione solitarie sono anche associate all'Eremita. Forse semplicemente ti può voler dire che devi fare un autoesame o una riflessione su te stesso. Ci sono momenti nella vita in cui bisogna fare un passo indietro per esaminare attentamente le situazioni e le decisioni che si sono prese. C'è qualcuno che può aiutarti a superare tutti i tuoi problemi e la loro conoscenza potrebbe sorprenderti. Questa persona sei proprio tu. Comprendendo te stesso sarai in grado di capire meglio gli altri.`,
-//   letturaFuturo:`La carta dell' Eremita nei Tarocchi insegna a staccare la mente e sfruttare il silenzio per ottenere illuminazione e auto-miglioramento. Rafforza l'importanza del silenzio profondo della tua anima per il raggiungimento dei tuoi obiettivi. Pertanto, la risposta alla tua domanda è forse. Quando ti renderai conto di quale sia la tua vera strada, non ci sarà più nulla che ti potrà ostacolare. La vita ti ha sfidato ma sei pronto a tirar fuori il meglio in futuro.`,
-
-// },
-// {
-//   name: `La Ruota della Fortuna`,
-//   imgUrl: `../assets/images/deck/la_fortuna.png`,
-//   letturaPassato:`La Ruota della Fortuna è in costante rotazione e ci ricorda che nulla è permanente. Sei poliedrico e talvolta contraddittorio, come qualcuno che è amichevole ma riservato, calmo ma spontaneo e curioso, a volte incapace di rimanere concentrato in ambienti formali. Puoi quindi essere una sfida da prevedere, anche da parte di amici e persone care, e la carta della Ruota della Fortuna incarna questo concetto. In passato, ti sei spesso impegnato in processi creativi e di risoluzione dei problemi per esplorare idee, sebbene il tuo approccio a ruota libera, per tentativi ed errori, a volte ti abbia portato a calpestare i piedi di altre persone.`,
-//   letturaPresente:`La Ruota della fortuna nei Tarocchi simboleggia i cicli della vita e parla di nuovi inizi. Molto probabilmente troverai che questi eventi sono positivi, ma essendo governati dalla fortuna, possono essere al di fuori del tuo controllo e influenza. Presta attenzione a quelle cose che puoi controllare attentamente e impara a non soffrire di ciò che non puoi controllare. Il cambiamento benefico sta arrivando, ma dovresti tenere presente che la fortuna è fuori dal tuo controllo.`,
-//   letturaFuturo:`Il futuro ti offre l'opportunità di cambiare il tuo percorso verso la crescita personale e la felicità. Devi essere pronto a cambiare il tuo modo di pensare e a rappresentare un cambiamento positivo, sia che le tue azioni abbiano successo o meno.`,
-// },
-// {
 //   name: `La Giustizia`,
 //   imgUrl: `../assets/images/deck/la_giustizia.png`,
 //   letturaPassato:`La carta della Giustizia è un promemoria fermo ma giusto che il karma è reale e che ogni azione ha una conseguenza. Sei apprezzato da molti per i tuoi chiari consigli e indicazioni, e la carta della giustizia incarna questo concetto. In passato hai dimostrato di essere affidabile e di avere una forte etica del lavoro. Ma ti sei anche guadagnato la reputazione di inflessibilità tra alcuni perché ti aspetti che gli altri ricambino, non necessariamente riconoscendo che a volte le persone contribuiscono in modi diversi.`,
@@ -318,32 +328,20 @@ export const TUTTITAROKKI: TarotService[] = [
 // {
 //   name: `La Temperanza`,
 //   imgUrl: `../assets/images/deck/la_temperanza.png`,
-//   letturaPassato:`La carta della Temperanza è una maestra della moderazione. Hai una serie di qualità equilibrate e la carta della Temperanza incarna questo aspetto della tua natura. Ad esempio, nonostante tu sia sensibile, hai eccellenti capacità analitiche. E sebbene tu sia riservato, hai le abilità di una persona forte e solide relazioni sociali. In passato, hai dimostrato di poter essere affidabile per portare a termine i lavori in tempo. Ma hai anche la tendenza a sottovalutare i tuoi risultati, il che significa che il lavoro che fai a volte non viene riconosciuto.`,
-//   letturaPresente:`La Temperanza nei Tarocchi è una carta ottimista che ti incoraggia a trovare un equilibrio nella tua vita e ad affrontare i problemi con un atteggiamento calmo. Riconosce che le forze opposte non hanno bisogno di essere in guerra dentro di te. Segui attentamente tutte le decisioni importanti che prendi. Fidati che le buone decisioni porteranno a un risultato positivo per te. Finalmente arriverà qualcosa che hai desiderato a lungo. Aspettati di sviluppare una fruttuosa collaborazione o un matrimonio nel tuo circolo sociale immediato.`,
-//   letturaFuturo:`La carta della Temperanza suggerisce l'intervento divino, l'equilibrio e l'armonia. La presenza generalmente positiva di questa carta nel tuo tiro rivela alti livelli di autostima e controllo nei tuoi sforzi. La risposta che questa carta ti dà è molto probabilmente sì. Prendi il controllo della tua vita e pratica la moderazione. Rimanendo in equilibrio risolverai qualsiasi conflitto attuale e inizierai un nuovo capitolo della tua vita.`,
 
 // },
 // {
 //   name: `Il Diavolo`,
 //   imgUrl: `../assets/images/deck/il_diavolo.png`,
-//   letturaPassato:`Una delle scelte che hai fatto per te era sbagliata. Le forze negative ti stanno trattenendo.`,
-//   letturaPresente:`Il Diavolo nei Tarocchi è la carta per eccellenza che parla di tutte le cose negative. Rabbia, violenza, tentazione, paura e dubbio sono solo alcuni dei sentimenti associati a questa figura. Suggerisce che forse sei intrappolato in una relazione folle, una dipendenza o una bugia. Senza dubbio, questa lettera dice di no. C'è un evento fuori dal tuo controllo che cambierà la tua vita. Non si sa se sarà nel bene o nel male, ma è necessario evitare comportamenti stravaganti e rimanere fedeli a se stessi.`,
-//   letturaFuturo:`È giunto il momento per te di trovare la bellezza dentro te stesso e smettere di proiettare quelle immagini ad altri nel mondo. Trova il coraggio di cambiare la tua vita. Il corso della tua vita è al di là delle tue conoscenze, ma la conoscenza supererà le tue illusioni.`,
 
 // },
 // {
 //   name: `La Torre`,
 //   imgUrl: `../assets/images/deck/la_torre.png`,
-//   letturaPassato:`Oscura e minacciosa, la Torre è l'incarnazione di complicazioni e conflitti. Non solo il cambiamento, ma il movimento improvviso e spiacevole causato dagli eventi imprevisti e traumatici che fanno parte della vita. La Torre sul tuo tiro è sempre una minaccia, ma la vita comporta inevitabilmente una tragedia e devi decidere se affrontarla con grazia. Per fare spazio al nuovo, il vecchio deve essere distrutto. Le ambizioni che hai perseguito sono costruite su basi deboli e offrono false ricompense.`,
-//   letturaPresente:`La carta della Torre nei Tarocchi parla di eventi imprevisti e cambiamenti che si verificheranno nella tua vita. Tuttavia, questi cambiamenti non sono catastrofici, disastrosi ma generalmente potrebbero essere negativi. Potrebbe essere correlato a qualche tipo di incidente, ritardo o danno in una qualsiasi area della tua vita. La risposta che questa carta ti dà è no. Un conflitto sta raggiungendo un punto critico nella tua vita. Le relazioni dovranno essere rivalutate e ristrutturate per mantenerle.`,
-//   letturaFuturo:`Resistendo alle sfide imminenti, il tuo futuro sarà brillante. Devi vedere le cose come vuoi che siano per trasformarle in quel modo. Sapere che il peggio è finito ti darà forza.`,
 // },
 // {
 //   name: `Le Stelle`,
 //   imgUrl: `../assets/images/deck/le_stelle.png`,
-//   letturaPassato:`La carta delle Stelle è l'incarnazione della speranza, un'influenza calmante che offre ottimismo e ispirazione. Quando trovi una causa che accende la tua immaginazione, porti un'energia che spesso ti spinge sotto i riflettori e la carta Stella incarna questo aspetto di te. In passato, le tue soluzioni originali ti hanno reso un leader tra i coetanei, ma dato il tuo amore per l'indipendenza, non è sempre questo che avresti voluto essere. Apprezzi la libertà di essere innovativo e talvolta questo ti ha portato a sentirti abbattuto o intrappolato in svariate routine e aspetti amministrativi della leadership.`,
-//   letturaPresente:`Le Stelle nei Tarocchi simboleggia la speranza, il rinnovamento e la bellezza. Suggerisce un periodo di calma spirituale, felicità e opportunità positive. Il significato generale di questa carta è ottimismo e serenità. La risposta che suggerisce la loro presenza è sì. Tieni conto dell'equilibrio e della moderazione quando trovi soluzioni ai tuoi problemi attuali. La quantità di aiuto e incoraggiamento che riceverai porterà armonia e felicità alle tue cerchie.`,
-//   letturaFuturo:`Si sta avvicinando il momento del rinnovo. Hai scelto la strada giusta per ripristinare la tua salute mentale e fisica. Essendo abbastanza coraggioso da percorrere le strade più rischiose ispirerai anche le persone intorno a te.`,
 
 // },
 // {
