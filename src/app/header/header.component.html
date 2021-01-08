@@ -27,8 +27,7 @@
 </button>
 <div class="collapse navbar-collapse" id="navbarNav" style="padding-top: 1em;">
     <ul class="navbar-nav mr-auto">
-        <i class="fab fa-500px"></i>
-        <i class="fas fa-home"></i>
+       
         <li class="nav-item active">
             <a class="nav-link"href="#"
 routerLink="/"
@@ -39,32 +38,46 @@ routerLinkActive="active-link"
             <a class="nav-link" href="#">Features</a>
         </li>
         <li class="nav-item">
-            <i class="fas fa-user"></i> <!-- uses solid style -->
-            <i class="fab fa-github-square"></i> <!-- uses brand style -->
+      
             <a class="nav-link" href="#">Pricing</a>
         </li>
     </ul>
- 
-</div>
 <div class="flex-grow-1 float-right">
-            <div>fff<i class="fas fa-coins">fff</i></div>
+
     <div *ngIf="isLoggedIn" ngbDropdown class="float-right">
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
             <button (click)="goToUserProfile()" ngbDropdownItem>Profile</button>
             <button (click)="logout()" ngbDropdownItem>Logout</button>
-    
+
         </div>
+        <div style="color:aliceblue">karma:{{score}}
+        <i class="fas fa-coins" style="color:aliceblue"></i>
+    
         <button class="userdetails" id="dropdownBasic1" ngbDropdownToggle>
             <img class="account-icon" src="">
             {{username}}
         </button>
+    </div>
     </div>
     <div *ngIf="!isLoggedIn">
         <a routerLink="/signup" class="float-right sign-up mr-2">Sign up</a>
         <a routerLink="/login" class="float-right login mr-2">Login</a>
 
     </div>
+
+
+   
+
+
+
+
+
 </div>
+</div>
+
+
+
+
 </nav>
 
 

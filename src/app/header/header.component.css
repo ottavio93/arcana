@@ -13,8 +13,8 @@
 
 .userdetails {
   background-color: transparent;
-  border-color: #0079d3;
-  color: #0079d3;
+  border-color: aliceblue;
+  color: aliceblue;
   fill: #0079d3;
   border: 1px solid;
   border-radius: 4px;
@@ -45,7 +45,7 @@
 }
 
 .dropdown-item:hover {
-  background-color: #0079d3;
+  background-color: #8f854a;
 }
 
 .dropdown-menu {

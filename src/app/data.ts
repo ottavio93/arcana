@@ -37,7 +37,7 @@ export const TUTTITAROKKI: TarotService[] = [
 
   {
     nome: 'La principessa',
-    punteggio: -12,
+    punteggio: 12,
     immagine: '../assets/images/deck/02_High_Priestess.jpg',
     passatoAmore: `La carta più intuitiva e connessa dell'intero mazzo dei Tarocchi, la Papessa è una carta di consapevolezza e subcoscienza. Sei di mente elevata e idealista e la carta dell'Alta Sacerdotessa incarna queste qualità. In passato, ti sei spesso preoccupato di trovare il livello morale in ogni situazione. Ma a volte ti sei spinto troppo oltre, lottando per collaborare e cooperare con coloro le cui opinioni sono diverse dalle tue.`,
     futuroAmore: `Le tue capacità creative represse o che hai ancora bisogno di scoprire ti chiedono di essere espresse. Devi cercare una guida spirituale che ti aiuti a raggiungere il massimo potenziale delle tue capacità fisiche o artistiche. Dovrai superare la tua paura dell'impegno per ottenere ciò che desideri.`,
@@ -54,7 +54,7 @@ export const TUTTITAROKKI: TarotService[] = [
 
   {
     nome: 'Imperatirce',
-    punteggio: -72,
+    punteggio: 472,
     immagine: '../assets/images/deck/03_Empress.jpg',
 
     passatoAmore: `La carta più intuitiva e connessa dell'intero mazzo dei Tarocchi, la Papessa è una carta di consapevolezza e subcoscienza. Sei di mente elevata e idealista e la carta dell'Alta Sacerdotessa incarna queste qualità. In passato, ti sei spesso preoccupato di trovare il livello morale in ogni situazione. Ma a volte ti sei spinto troppo oltre, lottando per collaborare e cooperare con coloro le cui opinioni sono diverse dalle tue.`,
@@ -70,7 +70,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
   {
     nome: 'Imperatore',
-    punteggio: -2,
+    punteggio: 2,
     immagine: '../assets/images/deck/04_Emperor.jpg',
     passatoAmore: `La carta più intuitiva e connessa dell'intero mazzo dei Tarocchi, la Papessa è una carta di consapevolezza e subcoscienza. Sei di mente elevata e idealista e la carta dell'Alta Sacerdotessa i`,
     futuroAmore: `Le tue capacità creative represse o che hai ancora bisogno di scoprire ti chiedono di essere espresse. Devi cercare una guida spirituale che ti aiuti a raggiungere il massimo potenziale delle tue`,
@@ -120,7 +120,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
   {
     nome: 'Carro',
-    punteggio: -92,
+    punteggio: 32,
     immagine: '../assets/images/deck/07_Chariot.jpg',
     passatoAmore: `La carta più intuitiva e connessa dell'intero mazzo dei Tarocchi, la Papessa è una carta di consapevolezza e subcoscienza. Sei di mente elevata e idealista e la carta dell'Alta Sacerdotessa i`,
     futuroAmore: `Le tue capacità creative represse o che hai ancora bisogno di scoprire ti chiedono di essere espresse. Devi cercare una guida spirituale che ti aiuti a raggiungere il massimo potenziale delle tue`,
@@ -136,7 +136,7 @@ export const TUTTITAROKKI: TarotService[] = [
   },
   {
     nome: 'Forza',
-    punteggio: -92,
+    punteggio: 2,
     immagine: '../assets/images/deck/08_Strength.jpg',
     passatoAmore: `La carta più intuitiva e connessa dell'intero mazzo dei Tarocchi, la Papessa è una carta di consapevolezza e subcoscienza. Sei di mente elevata e idealista e la carta dell'Alta Sacerdotessa i`,
     futuroAmore: `Le tue capacità creative represse o che hai ancora bisogno di scoprire ti chiedono di essere espresse. Devi cercare una guida spirituale che ti aiuti a raggiungere il massimo potenziale delle tue`,
@@ -170,7 +170,7 @@ export const TUTTITAROKKI: TarotService[] = [
 
   {
     nome: 'Routa della fortuna',
-    punteggio: -92,
+    punteggio: -112,
     immagine: '../assets/images/deck/10_Wheel_of_Fortune.jpg',
 
     futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
@@ -201,7 +201,7 @@ export const TUTTITAROKKI: TarotService[] = [
   {
     nome: 'Impiccato',
 
-    punteggio: -92,
+    punteggio: 92,
     immagine: '../assets/images/deck/12_Hanged_Man.jpg',
 
     futuroAmore: "E' l'inizio di un yuynuovo ciclo della sua vita",
@@ -268,7 +268,7 @@ export const TUTTITAROKKI: TarotService[] = [
   {
     nome: 'torre',
 
-    punteggio: -92,
+    punteggio: 2,
     immagine: '../assets/images/deck/16_Tower.jpg',
 
     futuroAmore: `È giunto il momento per te di trovare la bellezza dentro te stesso e smettere di proiettare quelle immagini ad altri nel mondo. Trova il coraggio di cambiare la tua vita. Il corso della tua vita è al di là delle tue conoscenze, ma la conoscenza supererà le tue illusioni.`,
@@ -285,7 +285,7 @@ export const TUTTITAROKKI: TarotService[] = [
   {
     nome: 'stella',
 
-    punteggio: -92,
+    punteggio: 222,
     immagine: '../assets/images/deck/17_Star.jpg',
 
     futuroAmore: `Si sta avvicinando il momento del rinnovo. Hai scelto la strada giusta per ripristinare la tua salute mentale e fisica. Essendo abbastanza coraggioso da percorrere le strade più rischiose ispirerai anche le persone intorno a te.`,

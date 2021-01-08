@@ -15,11 +15,13 @@ import {
 import { TUTTITAROKKI } from '../data';
 import { OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { ThrowStmt } from '@angular/compiler';
-import { HomeComponent } from '../home/home.component';
+
 import { HostListener } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from '../AUTH/shared/Auth.Service';
+import { ScoreRequestPayload } from '../AUTH/login/ScoreRequestPayload';
+
+import { throwError } from 'rxjs';
 declare var $: any;
 
 @Component({
@@ -30,6 +32,7 @@ declare var $: any;
 export class Tarots2Component implements OnInit, OnDestroy {
   isLoggedIn: boolean;
   username: string;
+  score: number;
   constructor(
     private cookie: CookieService,
     private authService: AuthService,
@@ -62,6 +65,7 @@ export class Tarots2Component implements OnInit, OnDestroy {
       console.log(
         'ciaooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'
       );
+      this.createPost();
     }
 
     console.log('funziona');
@@ -113,6 +117,7 @@ export class Tarots2Component implements OnInit, OnDestroy {
     let tarokkilimitati;
     tarocchiMischiati = tarocchiMischiati.sort(() => Math.random() - 0.5);
     tarokkilimitati = tarocchiMischiati.slice(0, 14);
+
     return tarokkilimitati;
   }
 
@@ -129,16 +134,45 @@ export class Tarots2Component implements OnInit, OnDestroy {
     elem.style.display = 'flex';
     console.log('e sparito');
   }
+  load: ScoreRequestPayload;
 
   //########### funzione  che fa apparire i testi  dei tarokki una volta premuto il bottone scorpi ####################
   showTesti() {
     var testi = document.getElementById('testi');
     testi.style.display = 'flex';
+    var puntiKarma = this.getScoreCards();
 
     var element = document.getElementById('sparisce');
     element.style.display = 'none';
-  }
 
+    console.log(puntiKarma);
+  }
+  createPost() {
+    this.score = this.authService.getScore();
+
+    this.load.username = this.authService.getUserName();
+    this.load.score = this.score;
+    this.authService.setScore(this.load).subscribe((error) => {
+      this.router.navigateByUrl('/tarots2');
+      throwError(error);
+    });
+  }
+  getScoreCards() {
+    this.score =
+      this.authService.getScore() +
+      this.done[0].punteggio +
+      this.done[1].punteggio +
+      this.done[2].punteggio;
+    this.load = {
+      username: 'g',
+      score: this.score,
+    };
+
+    this.authService.newscore(this.score);
+    this.authService.setScore(this.load);
+
+    return this.score;
+  }
   //########### metodi in lavorazione ####################
   flip() {
     console.log('grfgggggggggggggggggggggggggggggggggggggggggggggg');
