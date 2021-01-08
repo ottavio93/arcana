@@ -6,6 +6,7 @@ import { SphereComponent } from './sphere/sphere.component';
 import { TarotsComponent } from './tarots/tarots.component';
 import { Tarots2Component } from './tarots2/tarots2.component';
 import { LoginComponent } from './AUTH/login/login.component';
+import { ForumComponent } from './forum/forum.component';
 
 const routes: Routes = [
   { path: 'tarots', component: TarotsComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'forum', component: ForumComponent },
 ];
 
 @NgModule({

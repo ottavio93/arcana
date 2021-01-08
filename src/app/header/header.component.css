@@ -37,6 +37,7 @@
 }
 
 .dropdown-item {
+  color: aliceblue;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -45,12 +46,11 @@
 }
 
 .dropdown-item:hover {
-  background-color: #8f854a;
+  background-color: #dcb74a;
 }
 
 .dropdown-menu {
   background-color: #f8f9fa43;
-  left: -8em;
 }
 
 .account-icon {

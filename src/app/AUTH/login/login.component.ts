@@ -46,6 +46,11 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  log() {
+    this.login();
+    this.refreshPage();
+  }
+
   login() {
     this.loginRequestPayload.username = this.loginForm.get('username').value;
     this.loginRequestPayload.password = this.loginForm.get('password').value;
@@ -53,13 +58,23 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.loginRequestPayload).subscribe(
       (data) => {
         this.isError = false;
+
+        this.toastr.success('bentornato' + this.loginRequestPayload.username);
         this.router.navigateByUrl('');
-        this.toastr.success('Login Successful');
       },
       (error) => {
         this.isError = true;
         throwError(error);
       }
     );
+  }
+
+  reloadComponent() {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate(['/']);
+  }
+  refreshPage() {
+    window.location.reload();
   }
 }

@@ -55,16 +55,21 @@ export class AuthService {
             'authenticationToken',
             data.authenticationToken
           );
-
+          this.refreshPage();
           this.localStorage.store('username', data.username);
           this.localStorage.store('refreshToken', data.refreshToken);
           this.localStorage.store('expiresAt', data.expiresAt);
           this.localStorage.store('score', data.score);
+
           this.loggedIn.emit(true);
           this.username.emit(data.username);
+
           return true;
         })
       );
+  }
+  refreshPage() {
+    window.location.reload();
   }
 
   getJwtToken() {

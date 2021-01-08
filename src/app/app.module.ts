@@ -63,6 +63,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { SignupComponent } from './AUTH/signup/signup.component';
 import { LoginComponent } from './AUTH/login/login.component';
+import { ForumComponent } from './forum/forum.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,8 @@ import { LoginComponent } from './AUTH/login/login.component';
     SignupComponent,
 
     LoginComponent,
+
+    ForumComponent,
   ],
   imports: [
     NgxWebstorageModule.forRoot(),

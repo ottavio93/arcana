@@ -29,8 +29,13 @@ export class HeaderComponent implements OnInit {
     console.log(this.username + 'gg');
   }
   logout() {
+    this.refreshPage();
     this.authService.logout();
     this.isLoggedIn = false;
+
     this.router.navigateByUrl('');
+  }
+  refreshPage() {
+    window.location.reload();
   }
 }
