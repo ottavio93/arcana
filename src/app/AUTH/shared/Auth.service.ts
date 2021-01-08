@@ -111,6 +111,7 @@ export class AuthService {
     this.localStorage.clear('username');
     this.localStorage.clear('refreshToken');
     this.localStorage.clear('expiresAt');
+    this.localStorage.clear('score');
   }
 
   getUserName() {
