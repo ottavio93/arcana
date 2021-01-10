@@ -64,6 +64,9 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 import { SignupComponent } from './AUTH/signup/signup.component';
 import { LoginComponent } from './AUTH/login/login.component';
 import { ForumComponent } from './forum/forum.component';
+import { ParlaComponent } from './parla/parla.component';
+import { ProfileComponent } from './profile/profile.component';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 @NgModule({
   declarations: [
@@ -82,8 +85,16 @@ import { ForumComponent } from './forum/forum.component';
     LoginComponent,
 
     ForumComponent,
+
+    ParlaComponent,
+
+    ProfileComponent,
+
+    DialogExampleComponent,
   ],
+  entryComponents: [DialogExampleComponent],
   imports: [
+    MatDialogModule,
     NgxWebstorageModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,

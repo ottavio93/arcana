@@ -7,6 +7,7 @@ import { LoginRequestPayload } from '../login/login-request.payload';
 import { LoginResponse } from '../login/login-response.payload';
 import { map, tap } from 'rxjs/operators';
 import { ScoreRequestPayload } from '../login/ScoreRequestPayload';
+import { ReadTarokRequestPayload } from '../login/ReadTarokRequestPayload';
 
 @Injectable({
   providedIn: 'root',
@@ -40,6 +41,20 @@ export class AuthService {
     return this.httpClient.post(
       'http://localhost:8080/api/auth/setscore',
       scoreRequestPayload
+    );
+  }
+  setReading(
+    readTarokRequestPayload: ReadTarokRequestPayload
+  ): Observable<any> {
+    return this.httpClient.post(
+      'http://localhost:8080/api/auth/create',
+      readTarokRequestPayload
+    );
+  }
+
+  getReading(userName: string): Observable<any> {
+    return this.httpClient.get(
+      'http://localhost:8080/api/auth/historyTaroks/' + userName
     );
   }
 

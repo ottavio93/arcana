@@ -1,0 +1,12 @@
+.centro {
+  justify-content: center !important;
+  padding-top: 6em;
+  margin: auto;
+  max-width: 41em;
+}
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #fcc7485c;
+  border-color: #007bff00;
+}

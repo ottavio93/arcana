@@ -35,7 +35,7 @@ routerLinkActive="active-link"
 [routerLinkActiveOptions]="{ exact: true }">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" routerLink="/forum"
+            <a class="nav-link" routerLink="/parla"
 
 >parlaConArcana</a>
         </li>
@@ -48,7 +48,7 @@ routerLinkActive="active-link"
 
     <div *ngIf="isLoggedIn" ngbDropdown class="float-right">
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button (click)="goToUserProfile()" ngbDropdownItem>Profile</button>
+            <button  routerLink="/profile" ngbDropdownItem>Profile</button>
             <button (click)="logout()" ngbDropdownItem>Logout</button>
 
         </div>

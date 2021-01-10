@@ -1,0 +1,17 @@
+<div class="list-group centro" >
+    <button type="button" class="list-group-item list-group-item-action active">
+        storico letture<span style="float: right;"> punteggio</span>
+    </button>
+    <!-- <button type="button" (click)="openDialog(1)"
+     class="list-group-item list-group-item-action"*ngFor="let tarok of taroks">
+{{tarok.created}}  ></button> -->
+<li *ngFor="let tarok of taroks; index as i; first as isFirst" style="    display: table;">
+<button type="button" (click)="openDialog(i)"class="list-group-item list-group-item-action"> 
+  {{i}}/{{taroks.length}}. {{tarok.created}} <span style="float: right;">{{tarok.score}}
+  </span>
+  </button>
+</li>
+
+
+ 
+</div>

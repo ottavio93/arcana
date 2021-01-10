@@ -22,6 +22,8 @@ import { AuthService } from '../AUTH/shared/Auth.Service';
 import { ScoreRequestPayload } from '../AUTH/login/ScoreRequestPayload';
 
 import { throwError } from 'rxjs';
+import { ReadTarokRequestPayload } from '../AUTH/login/ReadTarokRequestPayload';
+
 declare var $: any;
 
 @Component({
@@ -33,11 +35,23 @@ export class Tarots2Component implements OnInit, OnDestroy {
   isLoggedIn: boolean;
   username: string;
   score: number;
+  tarokkiNames: string;
+  tarokkiDescription: string;
+  loadScore: ScoreRequestPayload;
+  readTarok: ReadTarokRequestPayload;
   constructor(
     private cookie: CookieService,
     private authService: AuthService,
     private router: Router
-  ) {}
+  ) {
+    this.readTarok = {
+      descriptionPassato: '',
+      descriptionPresente: '',
+      descriptionFuturo: '',
+      score: 0,
+      userName: '',
+    };
+  }
 
   ngOnInit() {
     this.authService.loggedIn.subscribe(
@@ -62,10 +76,23 @@ export class Tarots2Component implements OnInit, OnDestroy {
   controlloLogin() {
     if (this.username != null) {
       this.showTesti();
-      console.log(
-        'ciaooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'
-      );
+      this.username = this.authService.getUserName();
+
+      console.log(this.tarokkiNames);
+      this.readTarok.descriptionPassato = this.done[0].passatoAmore;
+      this.readTarok.descriptionPresente = this.done[1].presenteAmore;
+      this.readTarok.descriptionFuturo = this.done[2].futuroAmore;
+      this.readTarok.userName = this.username;
+      this.readTarok.score =
+        this.done[0].score + this.done[2].score + this.done[1].score;
       this.createPost();
+
+      this.authService.setReading(this.readTarok);
+      console.log(this.authService.getReading(this.username));
+      this.authService.getReading(this.username).subscribe((data) => {
+        console.log('data from dataList! ', data);
+        this.router.navigateByUrl('/tarots2');
+      });
     }
 
     console.log('funziona');
@@ -109,6 +136,11 @@ export class Tarots2Component implements OnInit, OnDestroy {
         event.currentIndex
       );
     }
+
+    if (this.done.length == 3) {
+      this.tarokkiNames =
+        this.done[0].nome + this.done[1].nome + this.done[2].nome;
+    }
   }
 
   //########### funzione importante mi restituise un array con gli oggetti mischiati a random ####################
@@ -134,7 +166,6 @@ export class Tarots2Component implements OnInit, OnDestroy {
     elem.style.display = 'flex';
     console.log('e sparito');
   }
-  load: ScoreRequestPayload;
 
   //########### funzione  che fa apparire i testi  dei tarokki una volta premuto il bottone scorpi ####################
   showTesti() {
@@ -147,29 +178,42 @@ export class Tarots2Component implements OnInit, OnDestroy {
 
     console.log(puntiKarma);
   }
+  //########### funzione  che salava le letture dei tarpkko nel db utente####################
   createPost() {
-    this.score = this.authService.getScore();
+    this.readTarok.descriptionPassato = this.done[0].passatoAmore;
+    this.readTarok.descriptionPresente = this.done[1].presenteAmore;
+    this.readTarok.descriptionFuturo = this.done[2].futuroAmore;
+    this.readTarok.userName = this.username;
+    this.readTarok.score =
+      this.done[0].punteggio + this.done[2].punteggio + this.done[1].punteggio;
 
-    this.load.username = this.authService.getUserName();
-    this.load.score = this.score;
-    this.authService.setScore(this.load).subscribe((error) => {
+    this.loadScore.username = this.username;
+    this.loadScore.score = this.score;
+
+    this.authService.setReading(this.readTarok).subscribe((error) => {
+      this.router.navigateByUrl('/tarots2');
+      throwError(error);
+    });
+
+    this.authService.setScore(this.loadScore).subscribe((error) => {
       this.router.navigateByUrl('/tarots2');
       throwError(error);
     });
   }
+
   getScoreCards() {
     this.score =
       this.authService.getScore() +
       this.done[0].punteggio +
       this.done[1].punteggio +
       this.done[2].punteggio;
-    this.load = {
+    this.loadScore = {
       username: 'g',
       score: this.score,
     };
 
     this.authService.newscore(this.score);
-    this.authService.setScore(this.load);
+    this.authService.setScore(this.loadScore);
 
     return this.score;
   }

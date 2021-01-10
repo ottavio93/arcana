@@ -7,6 +7,8 @@ import { TarotsComponent } from './tarots/tarots.component';
 import { Tarots2Component } from './tarots2/tarots2.component';
 import { LoginComponent } from './AUTH/login/login.component';
 import { ForumComponent } from './forum/forum.component';
+import { ParlaComponent } from './parla/parla.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: 'tarots', component: TarotsComponent },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forum', component: ForumComponent },
+  { path: 'parla', component: ParlaComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({

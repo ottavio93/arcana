@@ -58,17 +58,13 @@
 
 
 
-                    <div class="row justify-content-md-center" id="bottoni" style="display: none;margin-left: 9em;">
+                    <div class="row justify-content-md-center" id="bottoni" style="display: none;margin-left: 9em;    margin-top: 1.4em;">
                         <button type="button" class="btn btn-outline-light" id="button"
                             (click)="controlloLogin()">scopri
-                            sulamore
+                           la lettura
                         </button>
 
-                        <button type="button" class="btn btn-outline-light" id="button">scopri sulavoro
-                        </button>
-
-                        <button type="button" class="btn btn-outline-light" id="button">scopri sulasalute
-                        </button>
+                   
                     </div>
 
 
@@ -100,11 +96,12 @@
         <div class="risultati" *ngIf="done[2]">
             
                 <p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span class="testoMagico2">
-                        {{done[0].nome}}</span> ti dice:</p>{{done[0].passatoAmore }}<br>
+                        {{done[0].nome}} </span> ti dice:</p> {{done[0].passatoAmore }}<span style="color:#dfb017;">(karma: {{done[0].punteggio }})</span><br>
+                        <br>
                 <p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span
-                        class="testoMagico2">{{done[1].nome}}</span> ti dice:</p>{{done[1].presenteAmore }}<br>
+                        class="testoMagico2"> {{done[1].nome}}</span> ti dice:</p> {{done[1].presenteAmore }}<span style="color:#dfb017;">(karma: {{done[1].punteggio }})</span><br>
                 <p style="font-size: large;MARGIN-BOTTOM: 0px; padding-top: 2em;">La carta<span
-                        class="testoMagico2">{{done[2].nome}}</span> ti dice:</p>{{done[2].futuroAmore }}<br>
+                        class="testoMagico2"> {{done[2].nome}}</span> ti dice:</p> {{done[2].futuroAmore }}<span style="color:#dfb017;">(karma: {{done[2].punteggio }})</span><br>
           
         </div>
     
