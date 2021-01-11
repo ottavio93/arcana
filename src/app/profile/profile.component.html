@@ -7,7 +7,7 @@
 {{tarok.created}}  ></button> -->
 <li *ngFor="let tarok of taroks; index as i; first as isFirst" style="    display: table;">
 <button type="button" (click)="openDialog(i)"class="list-group-item list-group-item-action"> 
-  {{i}}/{{taroks.length}}. {{tarok.created}} <span style="float: right;">{{tarok.score}}
+ <span style="padding-right:1em ;">{{i }}</span> {{ (tarok.created| slice:0:9)}} <span style="float: right;">{{tarok.score}}
   </span>
   </button>
 </li>

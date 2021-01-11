@@ -3,13 +3,9 @@ export interface TarotService {
   punteggio: Number;
   immagine: string;
   futuroAmore: string;
-  futuroLavoro: string;
-  futuroSalute: string;
-  passatoLavoro: string;
-  presenteLavoro: string;
+
   presenteAmore: string;
-  presenteSalute: string;
-  passatoSalute: string;
+
   passatoAmore: string;
 }
 
