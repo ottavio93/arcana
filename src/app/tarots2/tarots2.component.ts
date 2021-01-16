@@ -148,6 +148,7 @@ export class Tarots2Component implements OnInit, OnDestroy {
     let tarocchiMischiati = this.tarokki;
     let tarokkilimitati;
     tarocchiMischiati = tarocchiMischiati.sort(() => Math.random() - 0.5);
+
     tarokkilimitati = tarocchiMischiati.slice(0, 14);
 
     return tarokkilimitati;

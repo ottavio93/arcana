@@ -1,1 +1,76 @@
-<p>forum works!</p>
+<div class="container" style="    background-color: #641544;">
+    <div class="row">
+
+        <div class="create-post-container col-lg-8"style="    padding-top: 5em;">
+
+
+            
+
+<div class="input-group">
+    
+    <textarea class="form-control" aria-label="With textarea" placeholder="scrivi un post  perottener punti"></textarea>
+<div class="input-group-prepend "><button class="btn btn-outline-warning" type="button">pubblica il post</button>
+    
+</div>
+</div>
+
+
+
+
+            <div style=" margin-top: 5%;">
+
+                <!-- <button type="button" (click)="openDialog(1)"
+     class="list-group-item list-group-item-action"*ngFor="let tarok of taroks">
+{{tarok.created}}  ></button> -->
+                <div *ngFor="let post of posts; index as i; first as isFirst"
+                    style=" margin-top: 4%;  display: table;background-color: transparent;"
+                   
+                    
+                    
+                    >
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="col">
+                                    <div class="card" style="width: 31rem;color: aliceblue;
+    background-color: #681744;
+    font-weight: 400;">
+                                        <p style="color: aliceblue;">post {{post.postId}}<span
+                                                style="float: right;">utente {{post.user.username}} <span style="color: #ffc107;                                           ">[karma:{{post.user.score}}]</span>
+                                            </span></p>
+                                        <div class="card-body">
+                                            <p class="card-text">{{post.description}}</p>
+
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <div><button (click)="upVote(post.postId) " [ngClass]="calculateClasses()" 
+                        (click)="submit()">^
+                                            karma</button> </div>
+                                    <div style="padding-top: 2em;">
+                                        <button (click)="downVote(post.postId)"
+                                        [ngClass]="calculateClasses()" 
+                        (click)="submit()"  >karma
+                                           v</button>
+                                    </div>
+
+
+
+                                </th>
+
+
+                            </tr>
+                        </tbody>
+                        <tbody>
+                    </table>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

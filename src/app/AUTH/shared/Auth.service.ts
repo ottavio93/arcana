@@ -8,6 +8,8 @@ import { LoginResponse } from '../login/login-response.payload';
 import { map, tap } from 'rxjs/operators';
 import { ScoreRequestPayload } from '../login/ScoreRequestPayload';
 import { ReadTarokRequestPayload } from '../login/ReadTarokRequestPayload';
+import { VoteRequest } from '../VoteRequest';
+import { PostModel } from '../PostModel';
 
 @Injectable({
   providedIn: 'root',
@@ -43,6 +45,16 @@ export class AuthService {
       scoreRequestPayload
     );
   }
+  votePost(vote: VoteRequest) {
+    return this.httpClient.post('http://localhost:8080/api/auth/voto', vote);
+  }
+  votePostMeno(vote: VoteRequest) {
+    return this.httpClient.post(
+      'http://localhost:8080/api/auth/votoMeno',
+      vote
+    );
+  }
+
   setReading(
     readTarokRequestPayload: ReadTarokRequestPayload
   ): Observable<any> {
@@ -55,6 +67,22 @@ export class AuthService {
   getReading(userName: string): Observable<any> {
     return this.httpClient.get(
       'http://localhost:8080/api/auth/historyTaroks/' + userName
+    );
+  }
+
+  putPost(readTarokRequestPayload: ReadTarokRequestPayload): Observable<any> {
+    return this.httpClient.post(
+      'http://localhost:8080/api/auth/createPost',
+      readTarokRequestPayload
+    );
+  }
+
+  getAllPost(): Observable<any> {
+    return this.httpClient.get('http://localhost:8080/api/auth/posts');
+  }
+  getPost(id: number): Observable<PostModel> {
+    return this.httpClient.get<PostModel>(
+      'http://localhost:8080/api/posts/' + id
     );
   }
 

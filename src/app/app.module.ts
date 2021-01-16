@@ -67,7 +67,7 @@ import { ForumComponent } from './forum/forum.component';
 import { ParlaComponent } from './parla/parla.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
-
+import { ChatModule } from './chat/chat.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -108,7 +108,7 @@ import { DialogExampleComponent } from './dialog-example/dialog-example.componen
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-
+    ChatModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
