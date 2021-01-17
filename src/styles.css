@@ -4,7 +4,7 @@ body {
   background: radial-gradient(
     circle,
     rgba(171, 48, 62, 1) 10%,
-    rgba(100, 21, 68, 1) 56%
+    rgba(100, 21, 68, 1) 33%
   );
 }
 @media (min-width: 576px) {

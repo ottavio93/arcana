@@ -25,9 +25,18 @@ export class ForumComponent implements OnInit {
     this.username = this.authService.getUserName();
 
     this.authService.getAllPost().subscribe((data) => {
-      this.posts = data;
+      this.posts = data.slice().reverse();
+
+      console.table(this.posts);
     });
   }
+
+  sortBy(prop: any) {
+    return this.posts.sort((a, b) =>
+      a[prop] > b[prop] ? 1 : a[prop] === b[prop] ? 0 : -1
+    );
+  }
+
   btnColour = 'red';
   change() {
     this.btnColour = 'green';
