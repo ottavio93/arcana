@@ -8,8 +8,8 @@
 
 <div class="input-group">
     
-    <textarea class="form-control" aria-label="With textarea" placeholder="scrivi un post  perottener punti"></textarea>
-<div class="input-group-prepend "><button class="btn btn-outline-warning" type="button">pubblica il post</button>
+    <input type="text" class="form-control" aria-label="With textarea" placeholder="scrivi un post  perottener punti" [(ngModel)]="value">
+<div class="input-group-prepend "><button class="btn btn-outline-warning"  (click)="addPost()" type="button">pubblica il post</button>
     
 </div>
 </div>

@@ -26,7 +26,6 @@ export class ForumComponent implements OnInit {
 
     this.authService.getAllPost().subscribe((data) => {
       this.posts = data;
-      console.table(this.posts);
     });
   }
   btnColour = 'red';
@@ -64,6 +63,7 @@ export class ForumComponent implements OnInit {
       alert('nn sei registato');
     }
   }
+  utentedelpost;
   upVote(id) {
     this.voteRequest.postId = id;
     this.voteRequest.userName = this.username;
@@ -71,9 +71,14 @@ export class ForumComponent implements OnInit {
 
     if (localStorage.getItem('ngx-webstorage|username') != null) {
       this.authService.votePost(this.voteRequest).subscribe((data) => {
+        console.log(this.posts[this.voteRequest.postId].user.username);
+        if (
+          this.voteRequest.userName ==
+          this.posts[this.voteRequest.postId].user.username
+        ) {
+          alert('non puoi votare un tuo post');
+        }
         this.ngOnInit();
-
-        console.log(data);
         this.ngOnInit();
         this.change();
       });
@@ -109,6 +114,37 @@ export class ForumComponent implements OnInit {
     console.log('grfgggggggggggggggggggggggggggggggggggggggggggggg');
     $('.nonvotato').toggleId('votato');
   }
+
+  post: PostModel = {
+    description: 'boooooooooooooooooooooooooooooooooooooooooooo',
+    userName: 'g',
+  };
+
+  value: string; // Add this as you had used and assign it to your ngModel
+
+  addPost() {
+    if (this.username != null && this.value.length > 5) {
+      this.post = {
+        description: this.value,
+        userName: this.username,
+      };
+
+      this.authService.putPost(this.post).subscribe((error) => {
+        this.ngOnInit();
+        throwError(error);
+      });
+      console.log('down');
+      this.ngOnInit();
+
+      console.log(this.post); // this will now have a value depends on your input from ngModel
+    } else if (this.username != null && this.value.length < 5) {
+      alert('il post deve contenere almeno 5 caratteri ');
+    } else {
+      alert('accedi o registrati per pubblicare un post ');
+    }
+  }
+
+  getValuesPost() {}
   // upVote(id) {
   //   if (localStorage.getItem('ngx-webstorage|username') != null) {
   //     this.authService.votePostPiu(id).subscribe((error) => {

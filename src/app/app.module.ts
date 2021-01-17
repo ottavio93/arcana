@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { A11yModule } from '@angular/cdk/a11y';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -112,6 +112,7 @@ import { ChatModule } from './chat/chat.module';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
+    FormsModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],

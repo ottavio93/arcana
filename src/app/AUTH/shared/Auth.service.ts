@@ -70,10 +70,10 @@ export class AuthService {
     );
   }
 
-  putPost(readTarokRequestPayload: ReadTarokRequestPayload): Observable<any> {
+  putPost(postModel: PostModel): Observable<any> {
     return this.httpClient.post(
       'http://localhost:8080/api/auth/createPost',
-      readTarokRequestPayload
+      postModel
     );
   }
 

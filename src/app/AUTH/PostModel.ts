@@ -1,5 +1,5 @@
 export class PostModel {
-  postId: number;
+  userName: string;
 
   description: string;
 }
