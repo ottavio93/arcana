@@ -10,6 +10,7 @@ import { ScoreRequestPayload } from '../login/ScoreRequestPayload';
 import { ReadTarokRequestPayload } from '../login/ReadTarokRequestPayload';
 import { VoteRequest } from '../VoteRequest';
 import { PostModel } from '../PostModel';
+import { PostDelete } from '../PostDelete';
 
 @Injectable({
   providedIn: 'root',
@@ -84,6 +85,16 @@ export class AuthService {
     return this.httpClient.get<PostModel>(
       'http://localhost:8080/api/posts/' + id
     );
+  }
+
+  deletePost(postDelete: PostDelete) {
+    return this.httpClient
+      .delete<PostDelete>(
+        'http://localhost:8080/api/auth/deletePost/' + postDelete
+      )
+      .subscribe((data) => {
+        console.log(data);
+      });
   }
 
   login(loginRequestPayload: LoginRequestPayload): Observable<boolean> {

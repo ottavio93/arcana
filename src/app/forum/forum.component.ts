@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
+import { PostDelete } from '../AUTH/PostDelete';
 import { PostModel } from '../AUTH/PostModel';
 import { AuthService } from '../AUTH/shared/Auth.Service';
 import { VoteType } from '../AUTH/Vote-type';
@@ -26,8 +27,7 @@ export class ForumComponent implements OnInit {
 
     this.authService.getAllPost().subscribe((data) => {
       this.posts = data.slice().reverse();
-
-      console.table(this.posts);
+      console.log(this.posts);
     });
   }
 
@@ -74,22 +74,21 @@ export class ForumComponent implements OnInit {
   }
   utentedelpost;
   upVote(id) {
-    this.voteRequest.postId = id;
+    this.voteRequest.postId = this.posts[id].postId;
     this.voteRequest.userName = this.username;
     this.voteRequest.voteType = VoteType.UPVOTE;
 
     if (localStorage.getItem('ngx-webstorage|username') != null) {
       this.authService.votePost(this.voteRequest).subscribe((data) => {
-        console.log(this.posts[this.voteRequest.postId].user.username);
-        if (
-          this.voteRequest.userName ==
-          this.posts[this.voteRequest.postId].user.username
-        ) {
+        console.log(this.posts[id].user.username + '  questo');
+
+        if (this.voteRequest.userName == this.posts[id].user.username) {
           alert('non puoi votare un tuo post');
+        } else {
+          this.ngOnInit();
+          this.ngOnInit();
+          this.change();
         }
-        this.ngOnInit();
-        this.ngOnInit();
-        this.change();
       });
       console.log('up');
     } else {
@@ -129,6 +128,11 @@ export class ForumComponent implements OnInit {
     userName: 'g',
   };
 
+  postDelete: PostDelete = {
+    userName: 'g',
+    idPost: 0,
+  };
+
   value: string; // Add this as you had used and assign it to your ngModel
 
   addPost() {
@@ -150,6 +154,18 @@ export class ForumComponent implements OnInit {
       alert('il post deve contenere almeno 5 caratteri ');
     } else {
       alert('accedi o registrati per pubblicare un post ');
+    }
+  }
+
+  deletepost(id: number) {
+    if (this.username != null) {
+      this.postDelete = {
+        idPost: id,
+        userName: this.username,
+      };
+
+      this.authService.deletePost(this.postDelete);
+      this.ngOnInit();
     }
   }
 
