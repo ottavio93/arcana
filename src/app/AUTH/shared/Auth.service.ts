@@ -87,14 +87,11 @@ export class AuthService {
     );
   }
 
-  deletePost(postDelete: PostDelete) {
-    return this.httpClient
-      .delete<PostDelete>(
-        'http://localhost:8080/api/auth/deletePost/' + postDelete
-      )
-      .subscribe((data) => {
-        console.log(data);
-      });
+  deletePost(postDelete: PostDelete): Observable<any> {
+    return this.httpClient.post(
+      'http://localhost:8080/api/auth/deletePost',
+      postDelete
+    );
   }
 
   login(loginRequestPayload: LoginRequestPayload): Observable<boolean> {

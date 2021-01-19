@@ -1,5 +1,5 @@
 export class PostDelete {
-  idPost: number;
+  postId: number;
 
   userName: string;
 }

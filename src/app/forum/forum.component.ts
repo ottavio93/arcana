@@ -24,7 +24,7 @@ export class ForumComponent implements OnInit {
     );
     var isClicked = false;
     this.username = this.authService.getUserName();
-
+    console.log('ciaooooooooooo' + this.username);
     this.authService.getAllPost().subscribe((data) => {
       this.posts = data.slice().reverse();
       console.log(this.posts);
@@ -130,7 +130,7 @@ export class ForumComponent implements OnInit {
 
   postDelete: PostDelete = {
     userName: 'g',
-    idPost: 0,
+    postId: 0,
   };
 
   value: string; // Add this as you had used and assign it to your ngModel
@@ -160,12 +160,19 @@ export class ForumComponent implements OnInit {
   deletepost(id: number) {
     if (this.username != null) {
       this.postDelete = {
-        idPost: id,
+        postId: this.posts[id].postId,
         userName: this.username,
       };
 
-      this.authService.deletePost(this.postDelete);
-      this.ngOnInit();
+      console.log(this.posts[id].user.username + '  questo');
+
+      if (this.username == this.posts[id].user.username) {
+        this.authService.deletePost(this.postDelete).subscribe((error) => {
+          this.ngOnInit();
+          throwError(error);
+        });
+        this.ngOnInit();
+      }
     }
   }
 
