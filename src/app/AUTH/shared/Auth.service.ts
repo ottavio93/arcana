@@ -11,6 +11,7 @@ import { ReadTarokRequestPayload } from '../login/ReadTarokRequestPayload';
 import { VoteRequest } from '../VoteRequest';
 import { PostModel } from '../PostModel';
 import { PostDelete } from '../PostDelete';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,7 @@ import { PostDelete } from '../PostDelete';
 export class AuthService {
   @Output() loggedIn: EventEmitter<boolean> = new EventEmitter();
   @Output() username: EventEmitter<string> = new EventEmitter();
-
+  baseUrl: string = environment.baseUrl;
   refreshTokenPayload = {
     refreshToken: this.getRefreshToken(),
     username: this.getUserName(),
@@ -34,7 +35,7 @@ export class AuthService {
 
   signup(signupRequestPayload: SignupRequestPayload): Observable<any> {
     return this.httpClient.post(
-      'http://localhost:8080/api/auth/signup',
+      this.baseUrl + 'api/auth/signup',
       signupRequestPayload,
       { responseType: 'text' }
     );
@@ -42,54 +43,49 @@ export class AuthService {
 
   setScore(scoreRequestPayload: ScoreRequestPayload): Observable<any> {
     return this.httpClient.post(
-      'http://localhost:8080/api/auth/setscore',
+      this.baseUrl + 'api/auth/setscore',
       scoreRequestPayload
     );
   }
   votePost(vote: VoteRequest) {
-    return this.httpClient.post('http://localhost:8080/api/auth/voto', vote);
+    return this.httpClient.post(this.baseUrl + 'api/auth/voto', vote);
   }
   votePostMeno(vote: VoteRequest) {
-    return this.httpClient.post(
-      'http://localhost:8080/api/auth/votoMeno',
-      vote
-    );
+    return this.httpClient.post(this.baseUrl + 'api/auth/votoMeno', vote);
   }
 
   setReading(
     readTarokRequestPayload: ReadTarokRequestPayload
   ): Observable<any> {
     return this.httpClient.post(
-      'http://localhost:8080/api/auth/create',
+      this.baseUrl + 'api/auth/create',
       readTarokRequestPayload
     );
   }
 
   getReading(userName: string): Observable<any> {
     return this.httpClient.get(
-      'http://localhost:8080/api/auth/historyTaroks/' + userName
+      this.baseUrl + 'api/auth/historyTaroks/' + userName
     );
   }
 
   putPost(postModel: PostModel): Observable<any> {
     return this.httpClient.post(
-      'http://localhost:8080/api/auth/createPost',
+      this.baseUrl + 'api/auth/createPost',
       postModel
     );
   }
 
   getAllPost(): Observable<any> {
-    return this.httpClient.get('http://localhost:8080/api/auth/posts');
+    return this.httpClient.get(this.baseUrl + 'api/auth/posts');
   }
   getPost(id: number): Observable<PostModel> {
-    return this.httpClient.get<PostModel>(
-      'http://localhost:8080/api/posts/' + id
-    );
+    return this.httpClient.get<PostModel>(this.baseUrl + 'api/posts/' + id);
   }
 
   deletePost(postDelete: PostDelete): Observable<any> {
     return this.httpClient.post(
-      'http://localhost:8080/api/auth/deletePost',
+      this.baseUrl + 'api/auth/deletePost',
       postDelete
     );
   }
@@ -97,7 +93,7 @@ export class AuthService {
   login(loginRequestPayload: LoginRequestPayload): Observable<boolean> {
     return this.httpClient
       .post<LoginResponse>(
-        'http://localhost:8080/api/auth/login/',
+        this.baseUrl + 'api/auth/login/',
         loginRequestPayload
       )
       .pipe(
@@ -133,7 +129,7 @@ export class AuthService {
   refreshToken() {
     return this.httpClient
       .post<LoginResponse>(
-        'http://localhost:8080/api/auth/refresh/token',
+        this.baseUrl + 'api/auth/refresh/token',
         this.refreshTokenPayload
       )
       .pipe(
@@ -152,7 +148,7 @@ export class AuthService {
 
   logout() {
     this.httpClient
-      .post('http://localhost:8080/api/auth/logout', this.refreshTokenPayload, {
+      .post(this.baseUrl + 'api/auth/logout', this.refreshTokenPayload, {
         responseType: 'text',
       })
       .subscribe(
@@ -185,7 +181,7 @@ export class AuthService {
   }
   getAllPostsByUser(name: string): Observable<number> {
     return this.httpClient.get<number>(
-      'http://localhost:8080/api/posts/by-user/' + name
+      this.baseUrl + 'api/posts/by-user/' + name
     );
   }
 }

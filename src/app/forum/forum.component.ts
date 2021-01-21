@@ -17,6 +17,17 @@ declare var $: any;
 export class ForumComponent implements OnInit {
   username: string;
   clickedIndex: number;
+  post: PostModel = {
+    description: 'boooooooooooooooooooooooooooooooooooooooooooo',
+    userName: 'g',
+  };
+
+  postDelete: PostDelete = {
+    userName: 'g',
+    postId: 0,
+  };
+
+  value: string; // Add this as you had used and assign it to your ngModel
 
   ngOnInit(): void {
     this.authService.username.subscribe(
@@ -56,9 +67,9 @@ export class ForumComponent implements OnInit {
 
   storage: Storage;
   downVote(id) {
-    this.voteRequest.postId = id;
+    this.voteRequest.postId = this.posts[id].postId;
     this.voteRequest.userName = this.username;
-    this.voteRequest.voteType = VoteType.DOWNVOTE;
+    this.voteRequest.voteType = VoteType.NONMIPIACE;
     if (localStorage.getItem('ngx-webstorage|username') != null) {
       this.authService.votePostMeno(this.voteRequest).subscribe((error) => {
         this.ngOnInit();
@@ -122,18 +133,6 @@ export class ForumComponent implements OnInit {
     console.log('grfgggggggggggggggggggggggggggggggggggggggggggggg');
     $('.nonvotato').toggleId('votato');
   }
-
-  post: PostModel = {
-    description: 'boooooooooooooooooooooooooooooooooooooooooooo',
-    userName: 'g',
-  };
-
-  postDelete: PostDelete = {
-    userName: 'g',
-    postId: 0,
-  };
-
-  value: string; // Add this as you had used and assign it to your ngModel
 
   addPost() {
     if (this.username != null && this.value.length > 5) {
