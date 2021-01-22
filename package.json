@@ -3,14 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-      "heroku-postbuild": "ng build --prod &amp;&amp; npm install -g http-server-spa",
-   
-    
+    "heroku-postbuild": "ng build --prod &amp;&amp; npm install -g http-server-spa",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "start": "http-server-spa dist/angular-arcana-magik index.html $PORT"
-     
   },
   "private": true,
   "dependencies": {
@@ -58,5 +55,8 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.5"
+  },
+  "engines": {
+    "node": "14.15.1"
   }
 }
