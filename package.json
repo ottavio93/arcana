@@ -9,8 +9,8 @@
    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "start": "http-server-spa dist/angular-arcana-magik index.html $PORT"
+    "e2e": "ng e2e"
+  
   },
   "private": true,
   "dependencies": {
