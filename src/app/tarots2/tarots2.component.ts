@@ -1,22 +1,13 @@
+import { Component, OnInit } from '@angular/core';
 import {
-  Component,
-  EventEmitter,
-  OnInit,
-  Output,
-  ɵConsole,
-} from '@angular/core';
-import {
-  CdkDrag,
   CdkDragDrop,
-  CdkDragEnter,
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { TUTTITAROKKI } from '../data';
-import { OnDestroy } from '@angular/core';
+
 import { Router } from '@angular/router';
 
-import { HostListener } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from '../AUTH/shared/Auth.Service';
 import { ScoreRequestPayload } from '../AUTH/login/ScoreRequestPayload';
@@ -31,7 +22,7 @@ declare var $: any;
   templateUrl: './tarots2.component.html',
   styleUrls: ['./tarots2.component.css'],
 })
-export class Tarots2Component implements OnInit, OnDestroy {
+export class Tarots2Component implements OnInit {
   isLoggedIn: boolean;
   username: string;
   score: number;
@@ -231,16 +222,16 @@ export class Tarots2Component implements OnInit, OnDestroy {
     return message;
   }
 
-  async stampatrecarte() {
-    (await this.done.length) == 3;
-    console.log('funione asicrona');
-    console.log(this.done);
-  }
+  // async stampatrecarte() {
+  //   (await this.done.length) == 3;
+  //   console.log('funione asicrona');
+  //   console.log(this.done);
+  // }
 
-  @HostListener('unloaded')
-  ngOnDestroy() {
-    console.log('Items destroyed');
-  }
+  // @HostListener('unloaded')
+  // ngOnDestroy() {
+  //   console.log('Items destroyed');
+  // }
 }
 // home: HomeComponent;
 // passato = this.tarokkinondoppiati[0].immagine;

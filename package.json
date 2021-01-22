@@ -2,7 +2,7 @@
   "name": "arcana",
   "version": "0.0.0",
   "engines": {
-    "node": ">= 8.0.0"
+    "node": "14.15.1"
   },
   "scripts": {
     "ng": "ng",

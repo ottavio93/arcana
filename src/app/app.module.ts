@@ -68,6 +68,7 @@ import { ParlaComponent } from './parla/parla.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 import { ChatModule } from './chat/chat.module';
+import { AuthService } from './AUTH/shared/Auth.Service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +76,7 @@ import { ChatModule } from './chat/chat.module';
     TarotsComponent,
     SphereComponent,
     Tarots2Component,
-
+    AuthService,
     HomeComponent,
 
     FooterComponent,
