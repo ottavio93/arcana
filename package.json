@@ -2,11 +2,11 @@
   "name": "arcana",
   "version": "0.0.0",
   "engines": {
-    "node": "14.15.1"
+    "node": "14.x"
   },
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
+    "build": "ng build --prod ",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
