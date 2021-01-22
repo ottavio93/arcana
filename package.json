@@ -4,7 +4,7 @@
   "scripts": {
     "build": "tsc",
     "heroku-prebuild": "echo This runs before Heroku installs dependencies.",
-    "heroku-postbuild": "ng build --prod",
+    "heroku-postbuild": "ng build --prod &amp;&amp; npm install -g http-server-spa",
     "heroku-cleanup": "echo This runs after Heroku prunes and caches dependencies.",
     "ng": "ng",
     "start": "node build/app.js",
