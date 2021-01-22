@@ -3,9 +3,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { throwError } from 'rxjs';
-import { AuthService } from '../shared/Auth.Service';
-import { LoginRequestPayload } from '../login/login-request.payload';
-import { LoginResponse } from '../login/login-response.payload';
+import { AuthService } from '../shared/auth.service';
+import { LoginRequestPayload } from './login-request.payload';
+import { LoginResponse } from './login-response.payload';
 
 @Component({
   selector: 'app-login',

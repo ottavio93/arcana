@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
-import { PostDelete } from '../AUTH/PostDelete';
-import { PostModel } from '../AUTH/PostModel';
-import { AuthService } from '../AUTH/shared/Auth.Service';
-import { VoteType } from '../AUTH/Vote-type';
-import { VoteRequest } from '../AUTH/VoteRequest';
+import { PostDelete } from '../auth/PostDelete';
+import { PostModel } from '../auth/PostModel';
+import { AuthService } from '../auth/shared/auth.service';
+import { VoteType } from '../auth/Vote-type';
+import { VoteRequest } from '../auth/VoteRequest';
 import { DialogExampleComponent } from '../dialog-example/dialog-example.component';
 declare var $: any;
 @Component({

@@ -61,14 +61,14 @@ import { CookieService } from 'ngx-cookie-service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxWebstorageModule } from 'ngx-webstorage';
-import { SignupComponent } from './AUTH/signup/signup.component';
-import { LoginComponent } from './AUTH/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
 import { ForumComponent } from './forum/forum.component';
 import { ParlaComponent } from './parla/parla.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 import { ChatModule } from './chat/chat.module';
-import { AuthService } from './AUTH/shared/Auth.Service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +76,7 @@ import { AuthService } from './AUTH/shared/Auth.Service';
     TarotsComponent,
     SphereComponent,
     Tarots2Component,
-    AuthService,
+
     HomeComponent,
 
     FooterComponent,

@@ -8,8 +8,8 @@ import {
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { catchError, filter, switchMap, take } from 'rxjs/operators';
-import { LoginResponse } from './AUTH/login/login-response.payload';
-import { AuthService } from './AUTH/shared/Auth.Service';
+import { LoginResponse } from './auth/login/login-response.payload';
+import { AuthService } from './auth/shared/auth.service';
 
 @Injectable({
   providedIn: 'root',

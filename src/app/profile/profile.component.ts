@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ReadTarokRequestPayload } from '../AUTH/login/ReadTarokRequestPayload';
-import { AuthService } from '../AUTH/shared/Auth.Service';
+import { ReadTarokRequestPayload } from '../auth/login/ReadTarokRequestPayload';
+import { AuthService } from '../auth/shared/auth.service';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DialogExampleComponent } from '../dialog-example/dialog-example.component';
 declare var $: any;
