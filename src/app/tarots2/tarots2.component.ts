@@ -9,7 +9,7 @@ import { TUTTITAROKKI } from '../data';
 import { Router } from '@angular/router';
 
 import { CookieService } from 'ngx-cookie-service';
-import { AuthService } from '../auth/shared/auth.service';
+import { AuthService } from '../auth/shared/authservice';
 import { ScoreRequestPayload } from '../auth/login/ScoreRequestPayload';
 
 import { throwError } from 'rxjs';

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
 import { PostDelete } from '../auth/PostDelete';
 import { PostModel } from '../auth/PostModel';
-import { AuthService } from '../auth/shared/auth.service';
+import { AuthService } from '../auth/shared/authservice';
 import { VoteType } from '../auth/Vote-type';
 import { VoteRequest } from '../auth/VoteRequest';
 import { DialogExampleComponent } from '../dialog-example/dialog-example.component';

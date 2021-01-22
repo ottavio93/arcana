@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
-import { AuthService } from '../auth/shared/auth.service';
+import { AuthService } from '../auth/shared/authservice';
 
 @Component({
   selector: 'app-header',

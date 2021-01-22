@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { SignupRequestPayload } from './SignupRequestPayload';
-import { AuthService } from '../shared/auth.service';
+import { AuthService } from '../shared/authservice';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
