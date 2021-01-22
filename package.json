@@ -2,10 +2,9 @@
   "name": "arcana",
   "version": "0.0.0",
   "scripts": {
-     "build": "tsc",
+    "build": "tsc",
     "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-  
     "start": "node build/app.js",
     "test": "ng test",
     "lint": "ng lint",
