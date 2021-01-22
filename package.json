@@ -6,10 +6,11 @@
   },
   "scripts": {
     "ng": "ng",
-   "build": "ng build",
+   "heroku-postbuild": "ng build --prod &amp;&amp; npm install -g http-server-spa",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start": "http-server-spa dist/arcana index.html $PORT"
   
   },
   "private": true,
