@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReadTarokRequestPayload } from '../auth/login/ReadTarokRequestPayload';
-import { AuthService } from '../auth/shared/authservice';
+import { Authservice } from '../auth/shared/authservice';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DialogExampleComponent } from '../dialog-example/dialog-example.component';
 declare var $: any;
@@ -12,7 +12,7 @@ declare var $: any;
 })
 export class ProfileComponent implements OnInit {
   constructor(
-    private authService: AuthService,
+    private authService: Authservice,
     private router: Router,
     public dialog: MatDialog
   ) {}

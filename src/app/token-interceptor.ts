@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { catchError, filter, switchMap, take } from 'rxjs/operators';
 import { LoginResponse } from './auth/login/login-response.payload';
-import { AuthService } from './auth/shared/authservice';
+import { Authservice } from './auth/shared/authservice';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +18,7 @@ export class TokenInterceptor implements HttpInterceptor {
   isTokenRefreshing = false;
   refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject(null);
 
-  constructor(public authService: AuthService) {}
+  constructor(public authService: Authservice) {}
 
   intercept(
     req: HttpRequest<any>,

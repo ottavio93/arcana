@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
-import { AuthService } from '../auth/shared/authservice';
+import { Authservice } from '../auth/shared/authservice';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   isLoggedIn: boolean;
   username: string;
   score: Number;
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: Authservice, private router: Router) {}
 
   ngOnInit() {
     this.authService.loggedIn.subscribe(

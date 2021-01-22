@@ -9,7 +9,7 @@ import { TUTTITAROKKI } from '../data';
 import { Router } from '@angular/router';
 
 import { CookieService } from 'ngx-cookie-service';
-import { AuthService } from '../auth/shared/authservice';
+import { Authservice } from '../auth/shared/authservice';
 import { ScoreRequestPayload } from '../auth/login/ScoreRequestPayload';
 
 import { throwError } from 'rxjs';
@@ -32,7 +32,7 @@ export class Tarots2Component implements OnInit {
   readTarok: ReadTarokRequestPayload;
   constructor(
     private cookie: CookieService,
-    private authService: AuthService,
+    private authService: Authservice,
     private router: Router
   ) {
     this.readTarok = {

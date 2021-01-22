@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { throwError } from 'rxjs';
-import { AuthService } from '../shared/authservice';
+import { Authservice } from '../shared/authservice';
 import { LoginRequestPayload } from './login-request.payload';
 import { LoginResponse } from './login-response.payload';
 
@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   isError: boolean;
 
   constructor(
-    private authService: AuthService,
+    private authService: Authservice,
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private toastr: ToastrService

@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { SignupRequestPayload } from './SignupRequestPayload';
-import { AuthService } from '../shared/authservice';
+import { Authservice } from '../shared/authservice';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
   signupForm: FormGroup;
 
   constructor(
-    private authService: AuthService,
+    private authService: Authservice,
     private router: Router,
     private toastr: ToastrService
   ) {

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
 import { PostDelete } from '../auth/PostDelete';
 import { PostModel } from '../auth/PostModel';
-import { AuthService } from '../auth/shared/authservice';
+import { Authservice } from '../auth/shared/authservice';
 import { VoteType } from '../auth/Vote-type';
 import { VoteRequest } from '../auth/VoteRequest';
 import { DialogExampleComponent } from '../dialog-example/dialog-example.component';
@@ -53,7 +53,7 @@ export class ForumComponent implements OnInit {
     this.btnColour = 'green';
   }
   public dialog: MatDialog;
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: Authservice, private router: Router) {
     this.voteRequest = {
       postId: 1,
       userName: this.username,
