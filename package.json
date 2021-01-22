@@ -1,12 +1,10 @@
 {
   "name": "arcana",
   "version": "0.0.0",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
-    "heroku-postbuild":"ng build --prod",
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -14,12 +12,12 @@
   },
   "private": true,
   "dependencies": {
-     "@angular/cli": "~11.0.6",
-    "@angular/compiler-cli": "~11.0.6",
     "@angular/animations": "^11.0.6",
     "@angular/cdk": "^10.2.7",
+    "@angular/cli": "~11.0.6",
     "@angular/common": "~11.0.6",
     "@angular/compiler": "~11.0.6",
+    "@angular/compiler-cli": "~11.0.6",
     "@angular/core": "^11.0.7",
     "@angular/forms": "~11.0.6",
     "@angular/localize": "~11.0.6",
@@ -30,14 +28,17 @@
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.5.3",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "ngx-cookie-service": "^11.0.2",
     "ngx-toastr": "^13.2.0",
     "ngx-webstorage": "^7.0.1",
     "ngx-webstorage-service": "^4.1.0",
+    "path": "^0.12.7",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
+    "typescript": "~4.0.5",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
@@ -60,5 +61,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.5"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.14.11"
   }
 }
