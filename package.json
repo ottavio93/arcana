@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "build": "tsc",
+    "heroku-prebuild": "echo This runs before Heroku installs dependencies.",
     "heroku-postbuild": "ng build --prod",
+    "heroku-cleanup": "echo This runs after Heroku prunes and caches dependencies.",
     "ng": "ng",
     "start": "node build/app.js",
     "test": "ng test",
