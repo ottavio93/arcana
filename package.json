@@ -9,8 +9,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "start": "http-server-spa dist/arcana-tarokki index.html $PORT"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
