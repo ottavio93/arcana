@@ -9,11 +9,11 @@ import { TUTTITAROKKI } from '../data';
 import { Router } from '@angular/router';
 
 import { CookieService } from 'ngx-cookie-service';
-import { AuthService } from '../AUTH/shared/Auth.Service';
-import { ScoreRequestPayload } from '../AUTH/login/ScoreRequestPayload';
+import { AuthService } from '../auth/shared/auth.service';
+import { ScoreRequestPayload } from '../auth/login/ScoreRequestPayload';
 
 import { throwError } from 'rxjs';
-import { ReadTarokRequestPayload } from '../AUTH/login/ReadTarokRequestPayload';
+import { ReadTarokRequestPayload } from '../auth/login/ReadTarokRequestPayload';
 
 declare var $: any;
 

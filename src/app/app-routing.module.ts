@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { SignupComponent } from './AUTH/signup/signup.component';
+import { SignupComponent } from './auth/signup/signup.component';
 import { SphereComponent } from './sphere/sphere.component';
 import { TarotsComponent } from './tarots/tarots.component';
 import { Tarots2Component } from './tarots2/tarots2.component';
-import { LoginComponent } from './AUTH/login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { ForumComponent } from './forum/forum.component';
 import { ParlaComponent } from './parla/parla.component';
 import { ProfileComponent } from './profile/profile.component';
